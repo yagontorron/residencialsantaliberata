@@ -114,6 +114,10 @@
     letter-spacing: 0.05em;
     color: var(--bronze);
   }
+  .accent {
+    color: var(--clay);
+    font-style: italic;
+  }
   .hairline {
     height: 1px;
     background: linear-gradient(90deg, transparent, var(--bronze), transparent);
