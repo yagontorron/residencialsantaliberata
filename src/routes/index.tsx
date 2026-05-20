@@ -1,26 +1,452 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { Reveal } from "@/components/Reveal";
+import fachada from "@/assets/fachada.png";
+import aerea from "@/assets/baiona-aerea.jpg";
+import castelo from "@/assets/baiona-castelo.jpg";
+import carabela from "@/assets/baiona-carabela.jpg";
+import iglesia from "@/assets/baiona-iglesia.jpg";
+import cocina from "@/assets/render-cocina.jpg";
+import dormitorio from "@/assets/render-dormitorio.jpg";
+import salon from "@/assets/render-salon.jpg";
+import plaza from "@/assets/plaza-proyecto.png";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Casa Liberata — Cuatro viviendas boutique en Baiona" },
+      {
+        name: "description",
+        content:
+          "Promoción boutique de cuatro viviendas de obra nueva en Plaza Santa Liberata, Baiona. Ubicación histórica, escala privada, materiales cuidados y atmósfera atlántica.",
+      },
+      { property: "og:title", content: "Casa Liberata — Cuatro viviendas boutique en Baiona" },
+      {
+        property: "og:description",
+        content:
+          "Promoción boutique de cuatro viviendas de obra nueva en Plaza Santa Liberata, Baiona.",
+      },
+      { property: "og:type", content: "website" },
+    ],
+    links: [
+      { rel: "canonical", href: "/" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap",
+      },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
+const viviendas = [
+  { n: "01", planta: "Planta baja", text: "Vivienda de planta baja con espacios amplios y relación directa con el jardín." },
+  { n: "02", planta: "Planta baja", text: "Vivienda de planta baja pensada para disfrutar amplitud, luz y exterior privado." },
+  { n: "03", planta: "Primera planta", text: "Vivienda en primera planta, amplia y luminosa, dentro de una promoción de solo cuatro unidades." },
+  { n: "04", planta: "Primera planta", text: "Vivienda en primera planta, con espacios generosos y sentido de casa en el centro de Baiona." },
+];
+
+const calidades = [
+  { t: "Cocinas", d: "Muebles en tonos madera y cashmere, encimeras de inspiración pétrea, grifería cuidada y electrodomésticos integrados para una cocina sobria, cálida y funcional.", img: cocina },
+  { t: "Baños", d: "Porcelánicos en tonos naturales, piezas suspendidas, grifería cromada y una composición pensada para reforzar la sensación de limpieza, calma y amplitud." },
+  { t: "Carpinterías y armarios", d: "Puertas lacadas, rodapiés blancos y armarios integrados para mantener una lectura interior limpia, luminosa y ordenada.", img: dormitorio },
+  { t: "Suelos y paramentos", d: "Tarima en las viviendas, porcelánicos en patios y paramentos en tonos claros para crear continuidad, luz y una base neutra sobre la que construir la atmósfera interior." },
+  { t: "Zonas comunes y exteriores", d: "Materiales cálidos, iluminación indirecta, vegetación y soluciones sencillas para que los espacios comunes mantengan la misma sobriedad que las viviendas.", img: salon },
+  { t: "Iluminación", d: "Luz cálida, indirecta y bien integrada, pensada para acompañar los materiales y crear una atmósfera tranquila tanto en interiores como en exteriores." },
+];
+
+function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div id="top" className="overflow-x-hidden">
+      <Header />
+
+      {/* HERO */}
+      <section className="pt-32 md:pt-40 pb-20 md:pb-28 px-6 md:px-12">
+        <div className="max-w-[1300px] mx-auto text-center">
+          <Reveal>
+            <p className="eyebrow mb-8">
+              Promoción boutique · Rúa Santa Liberata, 8 · Baiona
+            </p>
+          </Reveal>
+          <Reveal delay={120}>
+            <h1 className="font-serif text-[clamp(3.5rem,9vw,8rem)] leading-[0.95] tracking-[-0.02em] text-ink-strong mb-8">
+              Casa Liberata
+            </h1>
+          </Reveal>
+          <Reveal delay={220}>
+            <p className="font-serif italic text-xl md:text-2xl text-ink max-w-2xl mx-auto mb-4">
+              Cuatro viviendas boutique en el corazón histórico de Baiona.
+            </p>
+          </Reveal>
+          <Reveal delay={300}>
+            <p className="text-sm md:text-base text-ink/80 max-w-xl mx-auto mb-12">
+              Para quienes valoran el lugar, la calma y el detalle.
+            </p>
+          </Reveal>
+          <Reveal delay={380}>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-20">
+              <a href="#contacto" className="btn-primary">Solicitar dossier</a>
+              <a href="#viviendas" className="btn-ghost">Conocer las viviendas</a>
+            </div>
+          </Reveal>
+
+          <Reveal delay={460}>
+            <div className="hairline mb-12" />
+            <div className="relative max-w-5xl mx-auto">
+              <img
+                src={fachada}
+                alt="Fachada de Casa Liberata, ilustración a mano"
+                className="w-full h-auto"
+                style={{ boxShadow: "0 30px 80px -40px rgba(43,31,20,0.25)" }}
+              />
+            </div>
+            <div className="hairline mt-12" />
+          </Reveal>
+
+          <Reveal delay={200}>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-6 mt-20 text-left max-w-5xl mx-auto">
+              {[
+                ["Unidades", "4 viviendas"],
+                ["Ubicación", "Plaza Santa Liberata, Baiona"],
+                ["Proyecto", "Obra nueva boutique"],
+                ["Entrega estimada", "Verano 2027"],
+              ].map(([k, v]) => (
+                <div key={k}>
+                  <div className="eyebrow mb-3">{k}</div>
+                  <div className="font-serif text-lg md:text-xl text-ink-strong leading-snug">{v}</div>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* CAP I — CONCEPTO */}
+      <section id="concepto" className="py-28 md:py-40 px-6 md:px-12" style={{ backgroundColor: "var(--stone-warm)" }}>
+        <div className="max-w-3xl mx-auto text-center">
+          <Reveal>
+            <p className="chapter-label mb-6">Capítulo I — Concepto</p>
+          </Reveal>
+          <Reveal delay={100}>
+            <h2 className="text-[clamp(2rem,4.5vw,3.5rem)] leading-[1.1] text-ink-strong mb-10">
+              El equilibrio entre lugar, vivienda y detalle.
+            </h2>
+          </Reveal>
+          <Reveal delay={180}>
+            <div className="hairline mb-10 mx-auto w-24" />
+            <p className="text-base md:text-lg text-ink leading-[1.85] font-light">
+              Casa Liberata nace de una relación muy concreta con Baiona: su escala, su historia, su luz y su manera pausada de habitar.
+            </p>
+            <p className="text-base md:text-lg text-ink leading-[1.85] font-light mt-5">
+              Cuatro viviendas de obra nueva concebidas con amplitud, calma y una atención cuidada a los materiales, la atmósfera interior y la continuidad con el entorno.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* CAP II — EL LUGAR */}
+      <section id="lugar" className="py-28 md:py-40 px-6 md:px-12">
+        <div className="max-w-[1300px] mx-auto">
+          <div className="text-center mb-20">
+            <Reveal><p className="chapter-label mb-6">Capítulo II — El lugar</p></Reveal>
+            <Reveal delay={100}>
+              <h2 className="text-[clamp(2rem,4.5vw,3.5rem)] leading-[1.1] text-ink-strong max-w-3xl mx-auto mb-10">
+                Vivir entre la historia, la plaza y el mar.
+              </h2>
+            </Reveal>
+            <Reveal delay={180}>
+              <p className="text-base md:text-lg text-ink leading-[1.85] font-light max-w-2xl mx-auto">
+                En la Plaza Santa Liberata, Casa Liberata se sitúa en uno de los entornos con más carácter de Baiona: cerca del casco histórico, la vida local, el puerto, el mar y algunos de los lugares más reconocibles de la villa.
+              </p>
+              <p className="text-base md:text-lg text-ink leading-[1.85] font-light max-w-2xl mx-auto mt-5">
+                Una ubicación para vivir Baiona a pie, con la calma de una escala urbana propia y la cercanía de todo aquello que le da identidad.
+              </p>
+            </Reveal>
+          </div>
+
+          <Reveal>
+            <figure className="mb-6">
+              <img src={aerea} alt="Vista aérea de Baiona" className="w-full h-[60vh] md:h-[80vh] object-cover" />
+              <figcaption className="eyebrow mt-4">Baiona · Vista aérea</figcaption>
+            </figure>
+          </Reveal>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-12">
+            {[
+              { src: castelo, cap: "Castillo de Monterreal" },
+              { src: carabela, cap: "Carabela Pinta" },
+              { src: iglesia, cap: "Iglesia Santa Liberata" },
+            ].map((i, idx) => (
+              <Reveal key={i.cap} delay={idx * 100}>
+                <figure>
+                  <img src={i.src} alt={i.cap} className="w-full h-64 md:h-80 object-cover" />
+                  <figcaption className="eyebrow mt-3">{i.cap}</figcaption>
+                </figure>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* MÁS QUE UBICACIÓN */}
+      <section className="py-28 md:py-36 px-6 md:px-12" style={{ backgroundColor: "var(--noir)", color: "var(--ivory)" }}>
+        <div className="max-w-[1300px] mx-auto grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+          <Reveal>
+            <img src={plaza} alt="Proyecto de reurbanización de la Plaza Santa Liberata" className="w-full h-auto" />
+          </Reveal>
+          <Reveal delay={120}>
+            <p className="chapter-label mb-5" style={{ color: "var(--clay)" }}>Entorno en evolución</p>
+            <h2 className="font-serif text-[clamp(2rem,4vw,3rem)] leading-[1.1] mb-8" style={{ color: "var(--ivory)" }}>
+              Más que ubicación
+            </h2>
+            <div className="hairline mb-8 w-20" style={{ background: "linear-gradient(90deg, var(--clay), transparent)" }} />
+            <p className="text-base leading-[1.85] font-light opacity-85 mb-5">
+              El entorno inmediato de Santa Liberata está previsto que evolucione con un proyecto de reurbanización orientado a recuperar el espacio público, mejorar la accesibilidad y reforzar el carácter peatonal de la plaza.
+            </p>
+            <p className="text-base leading-[1.85] font-light opacity-85 mb-8">
+              Una intervención que suma valor al día a día: más espacio para caminar, nuevas zonas verdes, mobiliario urbano, iluminación renovada y una plaza pensada para volver a ser lugar de encuentro.
+            </p>
+            <a
+              href="https://www.vigoe.es/comarcas/val-minor/baiona/casi-15-millones-para-urbanizar-la-plaza-central-de-baiona-asi-sera-el-bulevar-ajardinado-de-santa-liberata/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs tracking-[0.18em] uppercase opacity-60 hover:opacity-100 border-b border-current pb-1 inline-block transition-opacity"
+            >
+              Fuente: VigoÉ — Proyecto de reurbanización de la Plaza Santa Liberata
+            </a>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* CAP III — VIVIENDAS */}
+      <section id="viviendas" className="py-28 md:py-40 px-6 md:px-12">
+        <div className="max-w-[1300px] mx-auto">
+          <div className="text-center mb-20">
+            <Reveal><p className="chapter-label mb-6">Capítulo III — Viviendas</p></Reveal>
+            <Reveal delay={100}>
+              <h2 className="text-[clamp(2rem,4.5vw,3.5rem)] leading-[1.1] text-ink-strong mb-10">
+                Cuatro únicas.
+              </h2>
+            </Reveal>
+            <Reveal delay={180}>
+              <p className="text-base md:text-lg text-ink leading-[1.85] font-light max-w-2xl mx-auto">
+                Una promoción de solo cuatro viviendas amplias de obra nueva: dos bajos con jardín y dos viviendas en primera planta.
+              </p>
+              <p className="text-base md:text-lg text-ink leading-[1.85] font-light max-w-2xl mx-auto mt-4">
+                Una escala privada, pensada para quienes buscan vivir Baiona desde el centro, con amplitud, comodidad y sentido de casa.
+              </p>
+            </Reveal>
+          </div>
+
+          <div className="grid sm:grid-cols-2 gap-6 md:gap-8">
+            {viviendas.map((v, idx) => (
+              <Reveal key={v.n} delay={idx * 80}>
+                <article
+                  className="group p-8 md:p-10 h-full flex flex-col transition-all duration-500"
+                  style={{ backgroundColor: "var(--card)", border: "1px solid var(--border)" }}
+                >
+                  <div
+                    className="aspect-[4/3] mb-8 flex items-center justify-center"
+                    style={{ backgroundColor: "var(--stone-warm)" }}
+                  >
+                    <span className="font-serif text-7xl text-ink/30">{v.n}</span>
+                  </div>
+                  <div className="flex items-baseline justify-between mb-4">
+                    <h3 className="font-serif text-3xl text-ink-strong">Vivienda {v.n}</h3>
+                    <span className="eyebrow">{v.planta}</span>
+                  </div>
+                  <p className="text-sm text-ink leading-relaxed mb-8 flex-grow">{v.text}</p>
+
+                  <dl className="grid grid-cols-3 gap-4 py-5 border-y border-border mb-8">
+                    <div>
+                      <dt className="eyebrow mb-1.5" style={{ fontSize: "0.6rem" }}>Sup.</dt>
+                      <dd className="font-serif text-base text-ink-strong">Consultar</dd>
+                    </div>
+                    <div>
+                      <dt className="eyebrow mb-1.5" style={{ fontSize: "0.6rem" }}>Dorm.</dt>
+                      <dd className="font-serif text-base text-ink-strong">Consultar</dd>
+                    </div>
+                    <div>
+                      <dt className="eyebrow mb-1.5" style={{ fontSize: "0.6rem" }}>Precio</dt>
+                      <dd className="font-serif text-base text-ink-strong">Consultar</dd>
+                    </div>
+                  </dl>
+
+                  <a href="#contacto" className="btn-ghost w-full">Solicitar información</a>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CAP IV — CALIDADES */}
+      <section id="calidades" className="py-28 md:py-40 px-6 md:px-12" style={{ backgroundColor: "var(--stone-warm)" }}>
+        <div className="max-w-[1300px] mx-auto">
+          <div className="text-center mb-20">
+            <Reveal><p className="chapter-label mb-6">Capítulo IV — Calidades</p></Reveal>
+            <Reveal delay={100}>
+              <h2 className="text-[clamp(2rem,4.5vw,3.5rem)] leading-[1.1] text-ink-strong mb-10">
+                Materiales, luz y detalle.
+              </h2>
+            </Reveal>
+            <Reveal delay={180}>
+              <p className="text-base md:text-lg text-ink leading-[1.85] font-light max-w-2xl mx-auto">
+                La selección de acabados busca una atmósfera cálida, sobria y atemporal: tonos neutros, madera, piedra, luz indirecta y materiales pensados para acompañar la arquitectura sin imponerse.
+              </p>
+              <p className="text-base md:text-lg text-ink leading-[1.85] font-light max-w-2xl mx-auto mt-4">
+                Cocinas, baños, carpinterías, armarios, zonas comunes e iluminación se plantean desde una misma idea: crear espacios serenos, duraderos y coherentes con el carácter atlántico del proyecto.
+              </p>
+            </Reveal>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-x-10 gap-y-16">
+            {calidades.map((c, idx) => (
+              <Reveal key={c.t} delay={(idx % 2) * 100}>
+                <div>
+                  {c.img && (
+                    <img src={c.img} alt={c.t} className="w-full h-72 md:h-96 object-cover mb-8" />
+                  )}
+                  {!c.img && (
+                    <div className="h-px w-16 mb-6" style={{ backgroundColor: "var(--bronze)" }} />
+                  )}
+                  <h3 className="font-serif text-2xl md:text-3xl text-ink-strong mb-4">{c.t}</h3>
+                  <p className="text-base text-ink leading-[1.8] font-light">{c.d}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          <Reveal>
+            <p className="text-xs text-ink/60 leading-relaxed mt-20 max-w-3xl mx-auto text-center italic">
+              Las calidades, marcas y referencias indicadas tienen carácter orientativo. El promotor se reserva el derecho a sustituirlas por materiales de características técnicas y estéticas equivalentes, en función de la disponibilidad del mercado o de ajustes propios del proceso de ejecución de la obra.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* CAP V — ESTADO DEL PROYECTO */}
+      <section className="py-28 md:py-40 px-6 md:px-12">
+        <div className="max-w-4xl mx-auto text-center">
+          <Reveal><p className="chapter-label mb-6">Capítulo V — Estado del proyecto</p></Reveal>
+          <Reveal delay={100}>
+            <h2 className="text-[clamp(2rem,4.5vw,3.5rem)] leading-[1.1] text-ink-strong mb-10">
+              Un proyecto ya en marcha.
+            </h2>
+          </Reveal>
+          <Reveal delay={180}>
+            <p className="text-base md:text-lg text-ink leading-[1.85] font-light max-w-2xl mx-auto mb-20">
+              Casa Liberata avanza como una promoción de obra nueva con licencia concedida, construcción iniciada y entrega estimada para verano de 2027.
+            </p>
+          </Reveal>
+
+          <div className="grid md:grid-cols-3 gap-10 md:gap-6 relative">
+            <div className="hidden md:block absolute top-3 left-[16%] right-[16%] h-px" style={{ backgroundColor: "var(--bronze)", opacity: 0.4 }} />
+            {[
+              { t: "Licencia concedida", s: "Completado" },
+              { t: "Construcción iniciada", s: "En curso" },
+              { t: "Entrega estimada", s: "Verano 2027" },
+            ].map((s, idx) => (
+              <Reveal key={s.t} delay={idx * 120}>
+                <div className="text-center relative">
+                  <div className="w-2.5 h-2.5 rounded-full mx-auto mb-6 relative z-10" style={{ backgroundColor: "var(--bronze)" }} />
+                  <h3 className="font-serif text-xl text-ink-strong mb-2">{s.t}</h3>
+                  <p className="eyebrow">{s.s}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CAP VI — CONTACTO */}
+      <section id="contacto" className="py-28 md:py-40 px-6 md:px-12" style={{ backgroundColor: "var(--card)" }}>
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-16">
+            <Reveal><p className="chapter-label mb-6">Capítulo VI — Solicitar información</p></Reveal>
+            <Reveal delay={100}>
+              <h2 className="text-[clamp(2rem,4.5vw,3.5rem)] leading-[1.1] text-ink-strong mb-8">
+                Solicitar información privada.
+              </h2>
+            </Reveal>
+            <Reveal delay={180}>
+              <p className="text-base md:text-lg text-ink leading-[1.85] font-light max-w-2xl mx-auto">
+                Recibe el dossier comercial, consulta disponibilidad o agenda una visita informativa para conocer la promoción con más detalle.
+              </p>
+            </Reveal>
+          </div>
+
+          <Reveal>
+            <form
+              onSubmit={(e) => { e.preventDefault(); alert("Gracias. Nos pondremos en contacto."); }}
+              className="space-y-8"
+            >
+              <div className="grid md:grid-cols-2 gap-8">
+                <Field label="Nombre" type="text" name="nombre" />
+                <Field label="Teléfono" type="tel" name="telefono" />
+              </div>
+              <Field label="Email" type="email" name="email" />
+              <div>
+                <label className="eyebrow block mb-3">Tipo de interés</label>
+                <select
+                  className="w-full bg-transparent border-b border-input py-3 text-base text-ink-strong focus:outline-none focus:border-ink-strong transition-colors"
+                  defaultValue=""
+                >
+                  <option value="" disabled>Seleccionar</option>
+                  <option>Primera vivienda</option>
+                  <option>Segunda residencia</option>
+                  <option>Inversión patrimonial</option>
+                  <option>Agente inmobiliario</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+              <div>
+                <label className="eyebrow block mb-3">Mensaje</label>
+                <textarea
+                  rows={4}
+                  className="w-full bg-transparent border-b border-input py-3 text-base text-ink-strong focus:outline-none focus:border-ink-strong transition-colors resize-none"
+                />
+              </div>
+              <div className="pt-4">
+                <button type="submit" className="btn-primary w-full md:w-auto">Solicitar dossier</button>
+              </div>
+            </form>
+          </Reveal>
+
+          <Reveal delay={120}>
+            <div className="hairline my-16" />
+            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-10 text-center">
+              {[
+                ["Teléfono", "Próximamente"],
+                ["Email", "Próximamente"],
+                ["WhatsApp", "Próximamente"],
+                ["Visita informativa", "Bajo cita previa"],
+              ].map(([k, v]) => (
+                <div key={k}>
+                  <div className="eyebrow mb-2">{k}</div>
+                  <div className="font-serif text-base text-ink-strong">{v}</div>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      <Footer />
     </div>
   );
 }
 
-function Index() {
-  return <PlaceholderIndex />;
+function Field({ label, type, name }: { label: string; type: string; name: string }) {
+  return (
+    <div>
+      <label className="eyebrow block mb-3">{label}</label>
+      <input
+        type={type}
+        name={name}
+        className="w-full bg-transparent border-b border-input py-3 text-base text-ink-strong focus:outline-none focus:border-ink-strong transition-colors"
+      />
+    </div>
+  );
 }
