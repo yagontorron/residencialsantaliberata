@@ -7,6 +7,10 @@ import aerea from "@/assets/baiona-aerea.jpg";
 import castelo from "@/assets/baiona-castelo.jpg";
 import carabela from "@/assets/baiona-carabela.jpg";
 import iglesia from "@/assets/baiona-iglesia.jpg";
+import cascoantiguo from "@/assets/baiona-cascoantiguo.jpg";
+import playa from "@/assets/baiona-playa.jpg";
+import arcadas from "@/assets/baiona-arcadas.jpg";
+import plazaHotel from "@/assets/baiona-plaza-hotel.jpg";
 import cocina from "@/assets/render-cocina.jpg";
 import dormitorio from "@/assets/render-dormitorio.jpg";
 import salon from "@/assets/render-salon.jpg";
@@ -33,7 +37,7 @@ export const Route = createFileRoute("/")({
       { rel: "canonical", href: "/" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap",
       },
     ],
   }),
@@ -48,12 +52,26 @@ const viviendas = [
 ];
 
 const calidades = [
-  { t: "Cocinas", d: "Muebles en tonos madera y cashmere, encimeras de inspiración pétrea, grifería cuidada y electrodomésticos integrados para una cocina sobria, cálida y funcional.", img: cocina },
-  { t: "Baños", d: "Porcelánicos en tonos naturales, piezas suspendidas, grifería cromada y una composición pensada para reforzar la sensación de limpieza, calma y amplitud." },
-  { t: "Carpinterías y armarios", d: "Puertas lacadas, rodapiés blancos y armarios integrados para mantener una lectura interior limpia, luminosa y ordenada.", img: dormitorio },
-  { t: "Suelos y paramentos", d: "Tarima en las viviendas, porcelánicos en patios y paramentos en tonos claros para crear continuidad, luz y una base neutra sobre la que construir la atmósfera interior." },
-  { t: "Zonas comunes y exteriores", d: "Materiales cálidos, iluminación indirecta, vegetación y soluciones sencillas para que los espacios comunes mantengan la misma sobriedad que las viviendas.", img: salon },
-  { t: "Iluminación", d: "Luz cálida, indirecta y bien integrada, pensada para acompañar los materiales y crear una atmósfera tranquila tanto en interiores como en exteriores." },
+  {
+    t: "La cocina",
+    img: cocina,
+    d: "Una cocina cálida y funcional, con tonos madera, superficies de inspiración pétrea y una presencia discreta de la grifería y los detalles.",
+  },
+  {
+    t: "Los dormitorios",
+    img: dormitorio,
+    d: "Estancias pensadas para la calma: tonos claros, armarios integrados y una base neutra que permite construir un interior sereno y personal.",
+  },
+  {
+    t: "El salón",
+    img: salon,
+    d: "Un espacio amplio y luminoso, donde la luz indirecta, la proporción y los materiales crean una atmósfera cómoda y atemporal.",
+  },
+  {
+    t: "Comunes y baños",
+    img: salon,
+    d: "Zonas comunes, baños y exteriores siguen la misma línea material: porcelánicos naturales, iluminación cálida y una lectura limpia del espacio.",
+  },
 ];
 
 function Index() {
@@ -62,36 +80,56 @@ function Index() {
       <Header />
 
       {/* HERO */}
-      <section className="pt-32 md:pt-40 pb-20 md:pb-28 px-6 md:px-12">
-        <div className="max-w-[1300px] mx-auto text-center">
+      <section className="pt-28 md:pt-40 pb-20 md:pb-28 px-6 md:px-12">
+        <div className="max-w-[1300px] mx-auto text-center flex flex-col">
+          {/* 1. Eyebrow */}
           <Reveal>
-            <p className="eyebrow mb-8">
+            <p className="eyebrow mb-8 md:mb-10 order-1">
               Promoción boutique · Rúa Santa Liberata, 8 · Baiona
             </p>
           </Reveal>
-          <Reveal delay={120}>
-            <h1 className="font-serif text-[clamp(3.5rem,9vw,8rem)] leading-[0.95] tracking-[-0.02em] text-ink-strong mb-8">
+
+          {/* 2. Imagen (mobile: aquí; desktop: más abajo) */}
+          <Reveal delay={120} className="order-2 md:hidden mb-10">
+            <img
+              src={fachada}
+              alt="Fachada de Casa Liberata, ilustración a mano"
+              className="w-full h-auto"
+              style={{ boxShadow: "0 20px 60px -30px rgba(43,31,20,0.25)" }}
+            />
+          </Reveal>
+
+          {/* 3. Título */}
+          <Reveal delay={160}>
+            <h1 className="order-3 font-serif text-[clamp(3rem,9vw,8rem)] leading-[0.95] tracking-[-0.02em] text-ink-strong mb-6 md:mb-8">
               Casa Liberata
             </h1>
           </Reveal>
+
+          {/* 4. Subtítulo */}
           <Reveal delay={220}>
-            <p className="font-serif italic text-xl md:text-2xl text-ink max-w-2xl mx-auto mb-4">
+            <p className="order-4 font-serif italic text-xl md:text-2xl text-ink max-w-2xl mx-auto mb-4">
               Cuatro viviendas boutique en el corazón histórico de Baiona.
             </p>
           </Reveal>
+
+          {/* 5. Frase */}
           <Reveal delay={300}>
-            <p className="text-sm md:text-base text-ink/80 max-w-xl mx-auto mb-12">
+            <p className="order-5 text-sm md:text-base text-ink/80 max-w-xl mx-auto mb-10 md:mb-12">
               Para quienes valoran el lugar, la calma y el detalle.
             </p>
           </Reveal>
+
+          {/* 6. Botones */}
           <Reveal delay={380}>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-20">
+            <div className="order-6 flex flex-col sm:flex-row gap-4 justify-center mb-16 md:mb-20">
               <a href="#contacto" className="btn-primary">Solicitar dossier</a>
               <a href="#viviendas" className="btn-ghost">Conocer las viviendas</a>
             </div>
           </Reveal>
 
-          <Reveal delay={460}>
+          {/* Imagen desktop (oculta en móvil porque ya está arriba) */}
+          <Reveal delay={460} className="order-7 hidden md:block">
             <div className="hairline mb-12" />
             <div className="relative max-w-5xl mx-auto">
               <img
@@ -105,7 +143,7 @@ function Index() {
           </Reveal>
 
           <Reveal delay={200}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-6 mt-20 text-left max-w-5xl mx-auto">
+            <div className="order-8 grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-6 mt-16 md:mt-20 text-left max-w-5xl mx-auto">
               {[
                 ["Unidades", "4 viviendas"],
                 ["Ubicación", "Plaza Santa Liberata, Baiona"],
@@ -129,8 +167,8 @@ function Index() {
             <p className="chapter-label mb-6">Capítulo I — Concepto</p>
           </Reveal>
           <Reveal delay={100}>
-            <h2 className="text-[clamp(2rem,4.5vw,3.5rem)] leading-[1.1] text-ink-strong mb-10">
-              El equilibrio entre lugar, vivienda y detalle.
+            <h2 className="text-[clamp(2rem,4.5vw,3.5rem)] leading-[1.15] text-ink-strong mb-10">
+              El <span className="accent">equilibrio</span> entre lugar, vivienda y detalle.
             </h2>
           </Reveal>
           <Reveal delay={180}>
@@ -151,8 +189,8 @@ function Index() {
           <div className="text-center mb-20">
             <Reveal><p className="chapter-label mb-6">Capítulo II — El lugar</p></Reveal>
             <Reveal delay={100}>
-              <h2 className="text-[clamp(2rem,4.5vw,3.5rem)] leading-[1.1] text-ink-strong max-w-3xl mx-auto mb-10">
-                Vivir entre la historia, la plaza y el mar.
+              <h2 className="text-[clamp(2rem,4.5vw,3.5rem)] leading-[1.15] text-ink-strong max-w-3xl mx-auto mb-10">
+                Vivir entre la <span className="accent">historia</span>, la plaza y el mar.
               </h2>
             </Reveal>
             <Reveal delay={180}>
@@ -176,9 +214,12 @@ function Index() {
             {[
               { src: castelo, cap: "Castillo de Monterreal" },
               { src: carabela, cap: "Carabela Pinta" },
-              { src: iglesia, cap: "Iglesia Santa Liberata" },
+              { src: cascoantiguo, cap: "Casco antiguo" },
+              { src: arcadas, cap: "Las Arcadas, frente al puerto" },
+              { src: playa, cap: "Playa de Ladeira" },
+              { src: plazaHotel, cap: "Plaza de Pedro de Castro" },
             ].map((i, idx) => (
-              <Reveal key={i.cap} delay={idx * 100}>
+              <Reveal key={i.cap} delay={idx * 80}>
                 <figure>
                   <img src={i.src} alt={i.cap} className="w-full h-64 md:h-80 object-cover" />
                   <figcaption className="eyebrow mt-3">{i.cap}</figcaption>
@@ -193,12 +234,15 @@ function Index() {
       <section className="py-28 md:py-36 px-6 md:px-12" style={{ backgroundColor: "var(--noir)", color: "var(--ivory)" }}>
         <div className="max-w-[1300px] mx-auto grid md:grid-cols-2 gap-12 md:gap-20 items-center">
           <Reveal>
-            <img src={plaza} alt="Proyecto de reurbanización de la Plaza Santa Liberata" className="w-full h-auto" />
+            <div className="space-y-6">
+              <img src={iglesia} alt="Iglesia de Santa Liberata" className="w-full h-auto" />
+              <img src={plaza} alt="Proyecto de reurbanización de la Plaza Santa Liberata" className="w-full h-auto" />
+            </div>
           </Reveal>
           <Reveal delay={120}>
             <p className="chapter-label mb-5" style={{ color: "var(--clay)" }}>Entorno en evolución</p>
-            <h2 className="font-serif text-[clamp(2rem,4vw,3rem)] leading-[1.1] mb-8" style={{ color: "var(--ivory)" }}>
-              Más que ubicación
+            <h2 className="font-serif text-[clamp(2rem,4vw,3rem)] leading-[1.15] mb-8" style={{ color: "var(--ivory)" }}>
+              Más que <span className="accent">ubicación</span>
             </h2>
             <div className="hairline mb-8 w-20" style={{ background: "linear-gradient(90deg, var(--clay), transparent)" }} />
             <p className="text-base leading-[1.85] font-light opacity-85 mb-5">
@@ -211,9 +255,9 @@ function Index() {
               href="https://www.vigoe.es/comarcas/val-minor/baiona/casi-15-millones-para-urbanizar-la-plaza-central-de-baiona-asi-sera-el-bulevar-ajardinado-de-santa-liberata/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs tracking-[0.18em] uppercase opacity-60 hover:opacity-100 border-b border-current pb-1 inline-block transition-opacity"
+              className="text-[0.65rem] tracking-[0.22em] uppercase opacity-50 hover:opacity-90 border-b border-current/40 pb-1 inline-block transition-opacity"
             >
-              Fuente: VigoÉ — Proyecto de reurbanización de la Plaza Santa Liberata
+              Fuente: VigoÉ
             </a>
           </Reveal>
         </div>
@@ -225,8 +269,8 @@ function Index() {
           <div className="text-center mb-20">
             <Reveal><p className="chapter-label mb-6">Capítulo III — Viviendas</p></Reveal>
             <Reveal delay={100}>
-              <h2 className="text-[clamp(2rem,4.5vw,3.5rem)] leading-[1.1] text-ink-strong mb-10">
-                Cuatro únicas.
+              <h2 className="text-[clamp(2rem,4.5vw,3.5rem)] leading-[1.15] text-ink-strong mb-10">
+                Cuatro <span className="accent">únicas</span>.
               </h2>
             </Reveal>
             <Reveal delay={180}>
@@ -281,45 +325,45 @@ function Index() {
         </div>
       </section>
 
-      {/* CAP IV — CALIDADES */}
-      <section id="calidades" className="py-28 md:py-40 px-6 md:px-12" style={{ backgroundColor: "var(--stone-warm)" }}>
-        <div className="max-w-[1300px] mx-auto">
-          <div className="text-center mb-20">
+      {/* CAP IV — CALIDADES (memoria visual) */}
+      <section id="calidades" className="py-28 md:py-40 px-6 md:px-12" style={{ backgroundColor: "var(--card)" }}>
+        <div className="max-w-[1200px] mx-auto">
+          <div className="text-center mb-20 md:mb-24 max-w-3xl mx-auto">
             <Reveal><p className="chapter-label mb-6">Capítulo IV — Calidades</p></Reveal>
             <Reveal delay={100}>
-              <h2 className="text-[clamp(2rem,4.5vw,3.5rem)] leading-[1.1] text-ink-strong mb-10">
-                Materiales, luz y detalle.
+              <h2 className="text-[clamp(2rem,4.5vw,3.5rem)] leading-[1.15] text-ink-strong mb-8">
+                La <span className="accent">memoria</span> de Casa Liberata.
               </h2>
             </Reveal>
-            <Reveal delay={180}>
-              <p className="text-base md:text-lg text-ink leading-[1.85] font-light max-w-2xl mx-auto">
-                La selección de acabados busca una atmósfera cálida, sobria y atemporal: tonos neutros, madera, piedra, luz indirecta y materiales pensados para acompañar la arquitectura sin imponerse.
+            <Reveal delay={160}>
+              <p className="font-serif italic text-lg md:text-xl text-ink mb-8">
+                Roble, piedra, blancos rotos y luz cálida. Una calidad que se siente más que se enumera.
               </p>
-              <p className="text-base md:text-lg text-ink leading-[1.85] font-light max-w-2xl mx-auto mt-4">
-                Cocinas, baños, carpinterías, armarios, zonas comunes e iluminación se plantean desde una misma idea: crear espacios serenos, duraderos y coherentes con el carácter atlántico del proyecto.
+            </Reveal>
+            <Reveal delay={220}>
+              <div className="hairline mb-8 mx-auto w-20" />
+              <p className="text-base md:text-lg text-ink leading-[1.85] font-light">
+                Una casa se reconoce en sus materiales: la temperatura de la madera, la luz indirecta, la continuidad de los tonos neutros y la calma de una composición bien resuelta.
               </p>
             </Reveal>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-x-10 gap-y-16">
+          <div className="grid md:grid-cols-2 gap-x-10 md:gap-x-14 gap-y-16 md:gap-y-24">
             {calidades.map((c, idx) => (
               <Reveal key={c.t} delay={(idx % 2) * 100}>
-                <div>
-                  {c.img && (
-                    <img src={c.img} alt={c.t} className="w-full h-72 md:h-96 object-cover mb-8" />
-                  )}
-                  {!c.img && (
-                    <div className="h-px w-16 mb-6" style={{ backgroundColor: "var(--bronze)" }} />
-                  )}
-                  <h3 className="font-serif text-2xl md:text-3xl text-ink-strong mb-4">{c.t}</h3>
-                  <p className="text-base text-ink leading-[1.8] font-light">{c.d}</p>
-                </div>
+                <figure>
+                  <img src={c.img} alt={c.t} className="w-full aspect-[4/3] object-cover mb-8" />
+                  <figcaption>
+                    <h3 className="font-serif text-2xl md:text-3xl text-ink-strong mb-4">{c.t}</h3>
+                    <p className="text-base text-ink leading-[1.8] font-light max-w-md">{c.d}</p>
+                  </figcaption>
+                </figure>
               </Reveal>
             ))}
           </div>
 
           <Reveal>
-            <p className="text-xs text-ink/60 leading-relaxed mt-20 max-w-3xl mx-auto text-center italic">
+            <p className="text-[0.7rem] text-ink/55 leading-relaxed mt-24 max-w-3xl mx-auto text-center italic font-light">
               Las calidades, marcas y referencias indicadas tienen carácter orientativo. El promotor se reserva el derecho a sustituirlas por materiales de características técnicas y estéticas equivalentes, en función de la disponibilidad del mercado o de ajustes propios del proceso de ejecución de la obra.
             </p>
           </Reveal>
@@ -331,8 +375,8 @@ function Index() {
         <div className="max-w-4xl mx-auto text-center">
           <Reveal><p className="chapter-label mb-6">Capítulo V — Estado del proyecto</p></Reveal>
           <Reveal delay={100}>
-            <h2 className="text-[clamp(2rem,4.5vw,3.5rem)] leading-[1.1] text-ink-strong mb-10">
-              Un proyecto ya en marcha.
+            <h2 className="text-[clamp(2rem,4.5vw,3.5rem)] leading-[1.15] text-ink-strong mb-10">
+              Un proyecto <span className="accent">ya en marcha</span>.
             </h2>
           </Reveal>
           <Reveal delay={180}>
@@ -361,13 +405,13 @@ function Index() {
       </section>
 
       {/* CAP VI — CONTACTO */}
-      <section id="contacto" className="py-28 md:py-40 px-6 md:px-12" style={{ backgroundColor: "var(--card)" }}>
+      <section id="contacto" className="py-28 md:py-40 px-6 md:px-12" style={{ backgroundColor: "var(--stone-warm)" }}>
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-16">
             <Reveal><p className="chapter-label mb-6">Capítulo VI — Solicitar información</p></Reveal>
             <Reveal delay={100}>
-              <h2 className="text-[clamp(2rem,4.5vw,3.5rem)] leading-[1.1] text-ink-strong mb-8">
-                Solicitar información privada.
+              <h2 className="text-[clamp(2rem,4.5vw,3.5rem)] leading-[1.15] text-ink-strong mb-8">
+                Solicitar información <span className="accent">privada</span>.
               </h2>
             </Reveal>
             <Reveal delay={180}>
@@ -412,23 +456,6 @@ function Index() {
                 <button type="submit" className="btn-primary w-full md:w-auto">Solicitar dossier</button>
               </div>
             </form>
-          </Reveal>
-
-          <Reveal delay={120}>
-            <div className="hairline my-16" />
-            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-10 text-center">
-              {[
-                ["Teléfono", "Próximamente"],
-                ["Email", "Próximamente"],
-                ["WhatsApp", "Próximamente"],
-                ["Visita informativa", "Bajo cita previa"],
-              ].map(([k, v]) => (
-                <div key={k}>
-                  <div className="eyebrow mb-2">{k}</div>
-                  <div className="font-serif text-base text-ink-strong">{v}</div>
-                </div>
-              ))}
-            </div>
           </Reveal>
         </div>
       </section>
