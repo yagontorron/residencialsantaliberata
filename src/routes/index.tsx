@@ -84,53 +84,14 @@ function Index() {
         <div className="max-w-[1300px] mx-auto text-center flex flex-col">
           {/* 1. Eyebrow */}
           <Reveal>
-            <p className="eyebrow mb-8 md:mb-10 order-1">
+            <p className="eyebrow mb-10 md:mb-12">
               Promoción boutique · Rúa Santa Liberata, 8 · Baiona
             </p>
           </Reveal>
 
-          {/* 2. Imagen (mobile: aquí; desktop: más abajo) */}
-          <Reveal delay={120} className="order-2 md:hidden mb-10">
-            <img
-              src={fachada}
-              alt="Fachada de Casa Liberata, ilustración a mano"
-              className="w-full h-auto"
-              style={{ boxShadow: "0 20px 60px -30px rgba(43,31,20,0.25)" }}
-            />
-          </Reveal>
-
-          {/* 3. Título */}
-          <Reveal delay={160}>
-            <h1 className="order-3 font-serif text-[clamp(3rem,9vw,8rem)] leading-[0.95] tracking-[-0.02em] text-ink-strong mb-6 md:mb-8">
-              Casa Liberata
-            </h1>
-          </Reveal>
-
-          {/* 4. Subtítulo */}
-          <Reveal delay={220}>
-            <p className="order-4 font-serif italic text-xl md:text-2xl text-ink max-w-2xl mx-auto mb-4">
-              Cuatro viviendas boutique en el corazón histórico de Baiona.
-            </p>
-          </Reveal>
-
-          {/* 5. Frase */}
-          <Reveal delay={300}>
-            <p className="order-5 text-sm md:text-base text-ink/80 max-w-xl mx-auto mb-10 md:mb-12">
-              Para quienes valoran el lugar, la calma y el detalle.
-            </p>
-          </Reveal>
-
-          {/* 6. Botones */}
-          <Reveal delay={380}>
-            <div className="order-6 flex flex-col sm:flex-row gap-4 justify-center mb-16 md:mb-20">
-              <a href="#contacto" className="btn-primary">Solicitar dossier</a>
-              <a href="#viviendas" className="btn-ghost">Conocer las viviendas</a>
-            </div>
-          </Reveal>
-
-          {/* Imagen desktop (oculta en móvil porque ya está arriba) */}
-          <Reveal delay={460} className="order-7 hidden md:block">
-            <div className="hairline mb-12" />
+          {/* 2. Imagen principal con hairlines (mismo tratamiento, ahora arriba) */}
+          <Reveal delay={120}>
+            <div className="hairline mb-10 md:mb-14" />
             <div className="relative max-w-5xl mx-auto">
               <img
                 src={fachada}
@@ -139,11 +100,41 @@ function Index() {
                 style={{ boxShadow: "0 30px 80px -40px rgba(43,31,20,0.25)" }}
               />
             </div>
-            <div className="hairline mt-12" />
+            <div className="hairline mt-10 md:mt-14 mb-12 md:mb-16" />
           </Reveal>
 
-          <Reveal delay={200}>
-            <div className="order-8 grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-6 mt-16 md:mt-20 text-left max-w-5xl mx-auto">
+          {/* 3. Título */}
+          <Reveal delay={160}>
+            <h1 className="font-serif text-[clamp(3rem,9vw,8rem)] leading-[0.95] tracking-[-0.02em] text-ink-strong mb-6 md:mb-8">
+              Casa Liberata
+            </h1>
+          </Reveal>
+
+          {/* 4. Subtítulo */}
+          <Reveal delay={220}>
+            <p className="font-serif italic text-xl md:text-2xl text-ink max-w-2xl mx-auto mb-4">
+              Cuatro viviendas boutique en el corazón histórico de Baiona.
+            </p>
+          </Reveal>
+
+          {/* 5. Frase */}
+          <Reveal delay={300}>
+            <p className="text-sm md:text-base text-ink/80 max-w-xl mx-auto mb-10 md:mb-12">
+              Para quienes valoran el lugar, la calma y el detalle.
+            </p>
+          </Reveal>
+
+          {/* 6. Botones */}
+          <Reveal delay={380}>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 md:mb-20">
+              <a href="#contacto" className="btn-primary">Solicitar dossier</a>
+              <a href="#viviendas" className="btn-ghost">Conocer las viviendas</a>
+            </div>
+          </Reveal>
+
+          {/* 7. Datos inferiores */}
+          <Reveal delay={460}>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-6 text-left max-w-5xl mx-auto">
               {[
                 ["Unidades", "4 viviendas"],
                 ["Ubicación", "Plaza Santa Liberata, Baiona"],
