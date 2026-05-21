@@ -16,6 +16,10 @@ import cocina from "@/assets/render-cocina.jpg";
 import dormitorio from "@/assets/render-dormitorio.jpg";
 import salon from "@/assets/render-salon.jpg";
 import plaza from "@/assets/plaza-proyecto.png";
+import planoBajoB from "@/assets/plano-bajo-b.png";
+import planoBajoA from "@/assets/plano-bajo-a.png";
+import planoPrimeroB from "@/assets/plano-primero-b.png";
+import planoPrimeroA from "@/assets/plano-primero-a.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -46,10 +50,42 @@ export const Route = createFileRoute("/")({
 });
 
 const viviendas = [
-  { n: "01", planta: "Planta baja", text: "Vivienda de planta baja con espacios amplios y relación directa con el jardín." },
-  { n: "02", planta: "Planta baja", text: "Vivienda de planta baja pensada para disfrutar amplitud, luz y exterior privado." },
-  { n: "03", planta: "Primera planta", text: "Vivienda en primera planta, amplia y luminosa, dentro de una promoción de solo cuatro unidades." },
-  { n: "04", planta: "Primera planta", text: "Vivienda en primera planta, con espacios generosos y sentido de casa en el centro de Baiona." },
+  {
+    nombre: "Bajo B",
+    planta: "Bajo",
+    dormitorios: 3,
+    superficie: "243,57 m²",
+    precio: "725.000 €",
+    plano: planoBajoB,
+    text: "Vivienda de planta baja con espacios amplios y relación directa con el jardín.",
+  },
+  {
+    nombre: "Bajo A",
+    planta: "Bajo",
+    dormitorios: 3,
+    superficie: "175,65 m²",
+    precio: "590.000 €",
+    plano: planoBajoA,
+    text: "Vivienda de planta baja pensada para disfrutar amplitud, luz y exterior privado.",
+  },
+  {
+    nombre: "1º B",
+    planta: "Primera planta",
+    dormitorios: 3,
+    superficie: "133,91 m²",
+    precio: "535.000 €",
+    plano: planoPrimeroB,
+    text: "Vivienda en primera planta, amplia y luminosa, dentro de una promoción de solo cuatro unidades.",
+  },
+  {
+    nombre: "1º A",
+    planta: "Primera planta",
+    dormitorios: 3,
+    superficie: "131,32 m²",
+    precio: "525.000 €",
+    plano: planoPrimeroA,
+    text: "Vivienda en primera planta, con espacios generosos y sentido de casa en el centro de Baiona.",
+  },
 ];
 
 const calidades = [
@@ -272,41 +308,49 @@ function Index() {
             </Reveal>
           </div>
 
-          <div className="grid sm:grid-cols-2 gap-6 md:gap-8">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-10">
             {viviendas.map((v, idx) => (
-              <Reveal key={v.n} delay={idx * 80}>
+              <Reveal key={v.nombre} delay={idx * 80}>
                 <article
-                  className="group p-8 md:p-10 h-full flex flex-col transition-all duration-500"
+                  className="group h-full flex flex-col transition-all duration-500"
                   style={{ backgroundColor: "var(--card)", border: "1px solid var(--border)" }}
                 >
                   <div
-                    className="aspect-[4/3] mb-8 flex items-center justify-center"
+                    className="p-6 md:p-8 flex items-center justify-center"
                     style={{ backgroundColor: "var(--stone-warm)" }}
                   >
-                    <span className="font-serif text-7xl text-ink/30">{v.n}</span>
+                    <img
+                      src={v.plano}
+                      alt={`Plano de la vivienda ${v.nombre}`}
+                      className="w-full h-auto max-h-[420px] object-contain"
+                      loading="lazy"
+                    />
                   </div>
-                  <div className="flex items-baseline justify-between mb-4">
-                    <h3 className="font-serif text-3xl text-ink-strong">Vivienda {v.n}</h3>
-                    <span className="eyebrow">{v.planta}</span>
+
+                  <div className="p-8 md:p-10 flex flex-col flex-grow">
+                    <div className="flex items-baseline justify-between mb-4">
+                      <h3 className="font-serif text-4xl text-ink-strong">{v.nombre}</h3>
+                      <span className="eyebrow">{v.planta}</span>
+                    </div>
+                    <p className="text-sm text-ink leading-relaxed mb-8 flex-grow">{v.text}</p>
+
+                    <dl className="grid grid-cols-3 gap-4 py-5 border-y border-border mb-8">
+                      <div>
+                        <dt className="eyebrow mb-1.5" style={{ fontSize: "0.6rem" }}>Superficie construida</dt>
+                        <dd className="font-serif text-base text-ink-strong">{v.superficie}</dd>
+                      </div>
+                      <div>
+                        <dt className="eyebrow mb-1.5" style={{ fontSize: "0.6rem" }}>Dormitorios</dt>
+                        <dd className="font-serif text-base text-ink-strong">{v.dormitorios}</dd>
+                      </div>
+                      <div>
+                        <dt className="eyebrow mb-1.5" style={{ fontSize: "0.6rem" }}>Precio</dt>
+                        <dd className="font-serif text-base text-ink-strong">{v.precio}</dd>
+                      </div>
+                    </dl>
+
+                    <a href="#contacto" className="btn-ghost w-full">Solicitar información</a>
                   </div>
-                  <p className="text-sm text-ink leading-relaxed mb-8 flex-grow">{v.text}</p>
-
-                  <dl className="grid grid-cols-3 gap-4 py-5 border-y border-border mb-8">
-                    <div>
-                      <dt className="eyebrow mb-1.5" style={{ fontSize: "0.6rem" }}>Sup.</dt>
-                      <dd className="font-serif text-base text-ink-strong">Consultar</dd>
-                    </div>
-                    <div>
-                      <dt className="eyebrow mb-1.5" style={{ fontSize: "0.6rem" }}>Dorm.</dt>
-                      <dd className="font-serif text-base text-ink-strong">Consultar</dd>
-                    </div>
-                    <div>
-                      <dt className="eyebrow mb-1.5" style={{ fontSize: "0.6rem" }}>Precio</dt>
-                      <dd className="font-serif text-base text-ink-strong">Consultar</dd>
-                    </div>
-                  </dl>
-
-                  <a href="#contacto" className="btn-ghost w-full">Solicitar información</a>
                 </article>
               </Reveal>
             ))}
