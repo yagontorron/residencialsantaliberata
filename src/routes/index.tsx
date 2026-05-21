@@ -201,23 +201,20 @@ function Index() {
             </figure>
           </Reveal>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-12">
-            {[
-              { src: castelo, cap: "Castillo de Monterreal" },
-              { src: carabela, cap: "Carabela Pinta" },
-              { src: cascoantiguo, cap: "Casco antiguo" },
-              { src: arcadas, cap: "Las Arcadas, frente al puerto" },
-              { src: playa, cap: "Playa de Ladeira" },
-              { src: plazaHotel, cap: "Plaza de Pedro de Castro" },
-            ].map((i, idx) => (
-              <Reveal key={i.cap} delay={idx * 80}>
-                <figure>
-                  <img src={i.src} alt={i.cap} className="w-full h-64 md:h-80 object-cover" />
-                  <figcaption className="eyebrow mt-3">{i.cap}</figcaption>
-                </figure>
-              </Reveal>
-            ))}
-          </div>
+          <Reveal delay={120}>
+            <div className="mt-12">
+              <PlaceCarousel
+                items={[
+                  { src: cascoantiguo, cap: "Casco histórico" },
+                  { src: castelo, cap: "Castillo de Monterreal" },
+                  { src: carabela, cap: "Carabela Pinta" },
+                  { src: playa, cap: "Mar y playas" },
+                  { src: arcadas, cap: "Las Arcadas · vida local" },
+                  { src: plazaHotel, cap: "Patrimonio de Baiona" },
+                ]}
+              />
+            </div>
+          </Reveal>
         </div>
       </section>
 
