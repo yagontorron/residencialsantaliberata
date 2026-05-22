@@ -31,9 +31,9 @@ export function Header() {
     >
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex items-center justify-between h-20 md:h-24">
         <a href="#top" className="flex items-center gap-3">
-          <img src={logo} alt="Promoción Santa Liberata" className="h-10 md:h-12 w-auto" />
+          <img src={logo} alt="Residencial Santa Liberata" className="h-10 md:h-12 w-auto" />
           <span className="hidden sm:block font-serif text-base tracking-[0.25em] uppercase text-ink-strong">
-            Promoción Santa Liberata
+            Residencial Santa Liberata
           </span>
         </a>
 
