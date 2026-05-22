@@ -24,13 +24,13 @@ import planoPrimeroA from "@/assets/plano-primero-a.png";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Promoción Santa Liberata — Cuatro viviendas boutique en Baiona" },
+      { title: "Residencial Santa Liberata — Cuatro viviendas boutique en Baiona" },
       {
         name: "description",
         content:
           "Promoción boutique de cuatro viviendas de obra nueva en Plaza Santa Liberata, Baiona. Ubicación histórica, escala privada, materiales cuidados y atmósfera atlántica.",
       },
-      { property: "og:title", content: "Promoción Santa Liberata — Cuatro viviendas boutique en Baiona" },
+      { property: "og:title", content: "Residencial Santa Liberata — Cuatro viviendas boutique en Baiona" },
       {
         property: "og:description",
         content:
@@ -122,7 +122,7 @@ function Index() {
           {/* 1. Eyebrow */}
           <Reveal>
             <p className="eyebrow mb-10 md:mb-12">
-              Promoción boutique · Rúa Santa Liberata, 8 · Baiona
+              Obra nueva boutique · Rúa Santa Liberata, 8 · Baiona
             </p>
           </Reveal>
 
@@ -132,7 +132,7 @@ function Index() {
             <div className="relative max-w-5xl mx-auto">
               <img
                 src={fachada}
-                alt="Fachada de Promoción Santa Liberata, ilustración a mano"
+                alt="Fachada de Residencial Santa Liberata, ilustración a mano"
                 className="w-full h-auto"
                 style={{ boxShadow: "0 30px 80px -40px rgba(43,31,20,0.25)" }}
               />
@@ -143,13 +143,20 @@ function Index() {
           {/* 3. Título */}
           <Reveal delay={160}>
             <h1 className="font-serif text-[clamp(3rem,9vw,8rem)] leading-[0.95] tracking-[-0.02em] text-ink-strong mb-6 md:mb-8">
-              Promoción Santa Liberata
+              Residencial Santa Liberata
             </h1>
           </Reveal>
 
-          {/* 4. Subtítulo */}
+          {/* 4. Subtítulo oficial */}
           <Reveal delay={220}>
             <p className="font-serif italic text-xl md:text-2xl text-ink max-w-2xl mx-auto mb-4">
+              Obra nueva boutique en Baiona.
+            </p>
+          </Reveal>
+
+          {/* 4b. Texto secundario */}
+          <Reveal delay={260}>
+            <p className="text-base md:text-lg text-ink max-w-2xl mx-auto mb-4">
               Cuatro viviendas boutique en el corazón histórico de Baiona.
             </p>
           </Reveal>
@@ -202,7 +209,7 @@ function Index() {
           <Reveal delay={180}>
             <div className="hairline mb-10 mx-auto w-24" />
             <p className="text-base md:text-lg text-ink leading-[1.85] font-light">
-              Promoción Santa Liberata nace de una relación muy concreta con Baiona: su escala, su historia, su luz y su manera pausada de habitar.
+              Residencial Santa Liberata nace de una relación muy concreta con Baiona: su escala, su historia, su luz y su manera pausada de habitar.
             </p>
             <p className="text-base md:text-lg text-ink leading-[1.85] font-light mt-5">
               Cuatro viviendas de obra nueva concebidas con amplitud, calma y una atención cuidada a los materiales, la atmósfera interior y la continuidad con el entorno.
@@ -223,7 +230,7 @@ function Index() {
             </Reveal>
             <Reveal delay={180}>
               <p className="text-base md:text-lg text-ink leading-[1.85] font-light max-w-2xl mx-auto">
-                En la Plaza Santa Liberata, Promoción Santa Liberata se sitúa en uno de los entornos con más carácter de Baiona: cerca del casco histórico, la vida local, el puerto, el mar y algunos de los lugares más reconocibles de la villa.
+                En la Plaza Santa Liberata, Residencial Santa Liberata se sitúa en uno de los entornos con más carácter de Baiona: cerca del casco histórico, la vida local, el puerto, el mar y algunos de los lugares más reconocibles de la villa.
               </p>
               <p className="text-base md:text-lg text-ink leading-[1.85] font-light max-w-2xl mx-auto mt-5">
                 Una ubicación para vivir Baiona a pie, con la calma de una escala urbana propia y la cercanía de todo aquello que le da identidad.
@@ -365,7 +372,7 @@ function Index() {
             <Reveal><p className="chapter-label mb-6">Capítulo IV — Calidades</p></Reveal>
             <Reveal delay={100}>
               <h2 className="text-[clamp(2rem,4.5vw,3.5rem)] leading-[1.15] text-ink-strong mb-8">
-                La <span className="accent">memoria</span> de Promoción Santa Liberata.
+                La <span className="accent">memoria</span> de Residencial Santa Liberata.
               </h2>
             </Reveal>
             <Reveal delay={160}>
@@ -414,7 +421,7 @@ function Index() {
           </Reveal>
           <Reveal delay={180}>
             <p className="text-base md:text-lg text-ink leading-[1.85] font-light max-w-2xl mx-auto mb-20">
-              Promoción Santa Liberata avanza como una promoción de obra nueva con licencia concedida, construcción iniciada y entrega estimada para verano de 2027.
+              Residencial Santa Liberata avanza como una promoción de obra nueva con licencia concedida, construcción iniciada y entrega estimada para verano de 2027.
             </p>
           </Reveal>
 

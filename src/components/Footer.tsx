@@ -4,9 +4,12 @@ export function Footer() {
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-20">
         <div className="grid md:grid-cols-3 gap-12 mb-16">
           <div>
-            <div className="font-serif text-2xl tracking-[0.15em] uppercase mb-3">Promoción Santa Liberata</div>
-            <p className="text-sm opacity-70 leading-relaxed max-w-xs">
-              Promoción boutique en Plaza Santa Liberata, Baiona.
+            <div className="font-serif text-2xl tracking-[0.15em] uppercase mb-3">Residencial Santa Liberata</div>
+            <p className="text-sm opacity-80 leading-relaxed max-w-xs mb-2">
+              Obra nueva boutique en Baiona.
+            </p>
+            <p className="text-xs opacity-60 leading-relaxed max-w-xs">
+              Plaza Santa Liberata, Baiona.
             </p>
           </div>
           <div>
@@ -32,7 +35,7 @@ export function Footer() {
         <p className="text-xs opacity-50 leading-relaxed max-w-3xl">
           Imágenes, renders, calidades y datos comerciales sujetos a disponibilidad, evolución del proyecto y documentación contractual correspondiente.
         </p>
-        <p className="text-xs opacity-40 mt-6">© {new Date().getFullYear()} Promoción Santa Liberata</p>
+        <p className="text-xs opacity-40 mt-6">© {new Date().getFullYear()} Residencial Santa Liberata</p>
       </div>
     </footer>
   );
