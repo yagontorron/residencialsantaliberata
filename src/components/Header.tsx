@@ -30,8 +30,12 @@ export function Header() {
       }}
     >
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex items-center justify-between h-20 md:h-24">
-        <a href="#top" className="flex items-center">
-          <img src={logo} alt="Residencial Santa Liberata · Obra nueva boutique en Baiona" className="h-12 md:h-16 w-auto" />
+        <a href="#top" className="flex items-center gap-4">
+          <img src={logo} alt="Residencial Santa Liberata" className="h-12 md:h-16 w-auto" />
+          <span className="hidden sm:flex flex-col leading-tight border-l border-ink/20 pl-4">
+            <span className="font-serif text-base md:text-lg text-ink-strong tracking-wide">Residencial Santa Liberata</span>
+            <span className="text-[0.6rem] md:text-[0.65rem] tracking-[0.2em] uppercase text-ink/70">Obra nueva boutique · Baiona</span>
+          </span>
         </a>
 
         <nav className="hidden lg:flex items-center gap-10">
