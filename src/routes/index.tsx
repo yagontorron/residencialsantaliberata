@@ -122,7 +122,7 @@ function Index() {
           {/* 1. Eyebrow */}
           <Reveal>
             <p className="eyebrow mb-10 md:mb-12">
-              Promoción boutique · Rúa Santa Liberata, 8 · Baiona
+              Obra nueva boutique · Rúa Santa Liberata, 8 · Baiona
             </p>
           </Reveal>
 
