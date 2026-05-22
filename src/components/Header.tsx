@@ -32,8 +32,13 @@ export function Header() {
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex items-center justify-between h-20 md:h-24">
         <a href="#top" className="flex items-center gap-3">
           <img src={logo} alt="Residencial Santa Liberata" className="h-10 md:h-12 w-auto" />
-          <span className="hidden sm:block font-serif text-base tracking-[0.25em] uppercase text-ink-strong">
-            Residencial Santa Liberata
+          <span className="flex flex-col leading-tight">
+            <span className="font-serif text-sm sm:text-base tracking-[0.2em] sm:tracking-[0.25em] uppercase text-ink-strong">
+              Residencial Santa Liberata
+            </span>
+            <span className="sm:hidden text-[0.6rem] tracking-[0.2em] uppercase text-ink/70 mt-0.5">
+              Obra nueva · Baiona
+            </span>
           </span>
         </a>
 
