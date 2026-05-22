@@ -5,8 +5,11 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-12 mb-16">
           <div>
             <div className="font-serif text-2xl tracking-[0.15em] uppercase mb-3">Residencial Santa Liberata</div>
-            <p className="text-sm opacity-70 leading-relaxed max-w-xs">
-              Promoción boutique en Plaza Santa Liberata, Baiona.
+            <p className="text-sm opacity-80 leading-relaxed max-w-xs mb-2">
+              Obra nueva boutique en Baiona.
+            </p>
+            <p className="text-xs opacity-60 leading-relaxed max-w-xs">
+              Plaza Santa Liberata, Baiona.
             </p>
           </div>
           <div>
