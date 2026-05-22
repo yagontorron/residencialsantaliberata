@@ -147,9 +147,16 @@ function Index() {
             </h1>
           </Reveal>
 
-          {/* 4. Subtítulo */}
+          {/* 4. Subtítulo oficial */}
           <Reveal delay={220}>
             <p className="font-serif italic text-xl md:text-2xl text-ink max-w-2xl mx-auto mb-4">
+              Obra nueva boutique en Baiona.
+            </p>
+          </Reveal>
+
+          {/* 4b. Texto secundario */}
+          <Reveal delay={260}>
+            <p className="text-base md:text-lg text-ink max-w-2xl mx-auto mb-4">
               Cuatro viviendas boutique en el corazón histórico de Baiona.
             </p>
           </Reveal>
