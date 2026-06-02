@@ -353,7 +353,7 @@ function Index() {
                         <dd className="font-serif text-base text-ink-strong">{v.dormitorios}</dd>
                       </div>
                       <div>
-                        <dt className="eyebrow mb-1.5" style={{ fontSize: "0.6rem" }}>Precio</dt>
+                        <dt className="eyebrow mb-1.5" style={{ fontSize: "0.6rem" }}>Desde</dt>
                         <dd className="font-serif text-base text-ink-strong">{v.precio}</dd>
                       </div>
                     </dl>
