@@ -107,8 +107,9 @@ const calidades = [
   },
   {
     t: "Comunes y baños",
-    img: salon,
+    img: iluminacionAsset.url,
     d: "Zonas comunes, baños y exteriores siguen la misma línea material: porcelánicos naturales, iluminación cálida y una lectura limpia del espacio.",
+    inspiration: true,
   },
 ];
 
