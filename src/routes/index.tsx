@@ -232,7 +232,7 @@ function Index() {
             </Reveal>
             <Reveal delay={180}>
               <p className="text-base md:text-lg text-ink leading-[1.85] font-light max-w-2xl mx-auto">
-                En la Plaza Santa Liberata, Residencial Santa Liberata se sitúa en uno de los entornos con más carácter de Baiona: cerca del casco histórico, la vida local, el puerto, el mar y algunos de los lugares más reconocibles de la villa.
+                En la Plaza Santa Liberata, Residencial Santa Liberata se sitúa en uno de los entornos con más carácter de Baiona: en el casco histórico, entre la vida local, el puerto, el mar y algunos de los lugares más reconocibles de la villa.
               </p>
               <p className="text-base md:text-lg text-ink leading-[1.85] font-light max-w-2xl mx-auto mt-5">
                 Una ubicación para vivir Baiona a pie, con la calma de una escala urbana propia y la cercanía de todo aquello que le da identidad.
