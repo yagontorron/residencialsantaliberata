@@ -394,7 +394,14 @@ function Index() {
             {calidades.map((c, idx) => (
               <Reveal key={c.t} delay={(idx % 2) * 100}>
                 <figure>
-                  <img src={c.img} alt={c.t} className="w-full aspect-[4/3] object-cover mb-8" />
+                  <div className="relative mb-8">
+                    <img src={c.img} alt={c.t} className="w-full aspect-[4/3] object-cover" />
+                    {c.inspiration && (
+                      <span className="absolute bottom-3 left-3 bg-background/85 backdrop-blur-sm text-ink-strong text-[0.6rem] tracking-[0.2em] uppercase px-3 py-1.5 border border-ink/10">
+                        Imagen de inspiración · ejemplo de iluminación
+                      </span>
+                    )}
+                  </div>
                   <figcaption>
                     <h3 className="font-serif text-2xl md:text-3xl text-ink-strong mb-4">{c.t}</h3>
                     <p className="text-base text-ink leading-[1.8] font-light max-w-md">{c.d}</p>
