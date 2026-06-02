@@ -20,6 +20,7 @@ import planoBajoB from "@/assets/plano-bajo-b.png";
 import planoBajoA from "@/assets/plano-bajo-a.png";
 import planoPrimeroB from "@/assets/plano-primero-b.png";
 import planoPrimeroA from "@/assets/plano-primero-a.png";
+import iluminacionAsset from "@/assets/iluminacion-inspiracion.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -106,8 +107,9 @@ const calidades = [
   },
   {
     t: "Comunes y baños",
-    img: salon,
+    img: iluminacionAsset.url,
     d: "Zonas comunes, baños y exteriores siguen la misma línea material: porcelánicos naturales, iluminación cálida y una lectura limpia del espacio.",
+    inspiration: true,
   },
 ];
 
@@ -230,7 +232,7 @@ function Index() {
             </Reveal>
             <Reveal delay={180}>
               <p className="text-base md:text-lg text-ink leading-[1.85] font-light max-w-2xl mx-auto">
-                En la Plaza Santa Liberata, Residencial Santa Liberata se sitúa en uno de los entornos con más carácter de Baiona: cerca del casco histórico, la vida local, el puerto, el mar y algunos de los lugares más reconocibles de la villa.
+                En la Plaza Santa Liberata, Residencial Santa Liberata se sitúa en uno de los entornos con más carácter de Baiona: en el casco histórico, entre la vida local, el puerto, el mar y algunos de los lugares más reconocibles de la villa.
               </p>
               <p className="text-base md:text-lg text-ink leading-[1.85] font-light max-w-2xl mx-auto mt-5">
                 Una ubicación para vivir Baiona a pie, con la calma de una escala urbana propia y la cercanía de todo aquello que le da identidad.
@@ -351,7 +353,7 @@ function Index() {
                         <dd className="font-serif text-base text-ink-strong">{v.dormitorios}</dd>
                       </div>
                       <div>
-                        <dt className="eyebrow mb-1.5" style={{ fontSize: "0.6rem" }}>Precio</dt>
+                        <dt className="eyebrow mb-1.5" style={{ fontSize: "0.6rem" }}>Desde</dt>
                         <dd className="font-serif text-base text-ink-strong">{v.precio}</dd>
                       </div>
                     </dl>
@@ -392,7 +394,14 @@ function Index() {
             {calidades.map((c, idx) => (
               <Reveal key={c.t} delay={(idx % 2) * 100}>
                 <figure>
-                  <img src={c.img} alt={c.t} className="w-full aspect-[4/3] object-cover mb-8" />
+                  <div className="relative mb-8">
+                    <img src={c.img} alt={c.t} className="w-full aspect-[4/3] object-cover" />
+                    {c.inspiration && (
+                      <span className="absolute bottom-3 left-3 bg-background/85 backdrop-blur-sm text-ink-strong text-[0.6rem] tracking-[0.2em] uppercase px-3 py-1.5 border border-ink/10">
+                        Imagen de inspiración · ejemplo de iluminación
+                      </span>
+                    )}
+                  </div>
                   <figcaption>
                     <h3 className="font-serif text-2xl md:text-3xl text-ink-strong mb-4">{c.t}</h3>
                     <p className="text-base text-ink leading-[1.8] font-light max-w-md">{c.d}</p>
