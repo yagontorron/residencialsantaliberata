@@ -255,7 +255,6 @@ function Index() {
                   { src: castelo, cap: "Castillo de Monterreal" },
                   { src: carabela, cap: "Carabela Pinta" },
                   { src: playa, cap: "Mar y playas" },
-                  { src: arcadas, cap: "Las Arcadas · vida local" },
                   { src: plazaHotel, cap: "Patrimonio de Baiona" },
                 ]}
               />
