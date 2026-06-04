@@ -479,7 +479,7 @@ function Index() {
           <Reveal delay={80}>
             <div className="grid sm:grid-cols-3 gap-4 md:gap-6 mb-12">
               <a
-                href="https://wa.me/?text=Hola%2C%20estoy%20interesado%2Fa%20en%20Residencial%20Santa%20Liberata.%20Me%20gustar%C3%ADa%20recibir%20el%20dossier%20comercial%20de%20la%20promoci%C3%B3n.%20Gracias."
+                href="https://wa.me/34645618810?text=Hola%2C%20estoy%20interesado%2Fa%20en%20Residencial%20Santa%20Liberata.%20Me%20gustar%C3%ADa%20recibir%20el%20dossier%20comercial%20de%20la%20promoci%C3%B3n.%20Gracias."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary text-center"
@@ -487,7 +487,7 @@ function Index() {
                 Solicitar dossier comercial
               </a>
               <a
-                href="https://wa.me/?text=Hola%2C%20estoy%20interesado%2Fa%20en%20Residencial%20Santa%20Liberata.%20Me%20gustar%C3%ADa%20agendar%20una%20visita%20informativa%20para%20conocer%20la%20promoci%C3%B3n%20con%20m%C3%A1s%20detalle.%20Gracias."
+                href="https://wa.me/34645618810?text=Hola%2C%20estoy%20interesado%2Fa%20en%20Residencial%20Santa%20Liberata.%20Me%20gustar%C3%ADa%20agendar%20una%20visita%20informativa%20para%20conocer%20la%20promoci%C3%B3n%20con%20m%C3%A1s%20detalle.%20Gracias."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary text-center"
@@ -495,7 +495,7 @@ function Index() {
                 Agendar una visita informativa
               </a>
               <a
-                href="https://wa.me/?text=Hola%2C%20estoy%20interesado%2Fa%20en%20Residencial%20Santa%20Liberata.%20Me%20gustar%C3%ADa%20consultar%20la%20disponibilidad%20actual%20de%20las%20viviendas.%20Gracias."
+                href="https://wa.me/34645618810?text=Hola%2C%20estoy%20interesado%2Fa%20en%20Residencial%20Santa%20Liberata.%20Me%20gustar%C3%ADa%20consultar%20la%20disponibilidad%20actual%20de%20las%20viviendas.%20Gracias."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary text-center"
