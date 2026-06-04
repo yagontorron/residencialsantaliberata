@@ -471,58 +471,49 @@ function Index() {
           </div>
 
           <Reveal>
-            <form
-              onSubmit={(e) => { e.preventDefault(); alert("Gracias. Nos pondremos en contacto."); }}
-              className="space-y-8"
-            >
-              <div className="grid md:grid-cols-2 gap-8">
-                <Field label="Nombre" type="text" name="nombre" />
-                <Field label="Teléfono" type="tel" name="telefono" />
-              </div>
-              <Field label="Email" type="email" name="email" />
-              <div>
-                <label className="eyebrow block mb-3">Tipo de interés</label>
-                <select
-                  className="w-full bg-transparent border-b border-input py-3 text-base text-ink-strong focus:outline-none focus:border-ink-strong transition-colors"
-                  defaultValue=""
-                >
-                  <option value="" disabled>Seleccionar</option>
-                  <option>Primera vivienda</option>
-                  <option>Segunda residencia</option>
-                  <option>Inversión patrimonial</option>
-                  <option>Agente inmobiliario</option>
-                  <option>Otro</option>
-                </select>
-              </div>
-              <div>
-                <label className="eyebrow block mb-3">Mensaje</label>
-                <textarea
-                  rows={4}
-                  className="w-full bg-transparent border-b border-input py-3 text-base text-ink-strong focus:outline-none focus:border-ink-strong transition-colors resize-none"
-                />
-              </div>
-              <div className="pt-4">
-                <button type="submit" className="btn-primary w-full md:w-auto">Solicitar dossier</button>
-              </div>
-            </form>
+            <div className="text-center mb-10">
+              <p className="text-sm md:text-base text-ink/70 font-light">Elige cómo quieres continuar:</p>
+            </div>
+          </Reveal>
+
+          <Reveal delay={80}>
+            <div className="grid sm:grid-cols-3 gap-4 md:gap-6 mb-12">
+              <a
+                href="https://wa.me/?text=Hola%2C%20estoy%20interesado%2Fa%20en%20Residencial%20Santa%20Liberata.%20Me%20gustar%C3%ADa%20recibir%20el%20dossier%20comercial%20de%20la%20promoci%C3%B3n.%20Gracias."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary text-center"
+              >
+                Solicitar dossier comercial
+              </a>
+              <a
+                href="https://wa.me/?text=Hola%2C%20estoy%20interesado%2Fa%20en%20Residencial%20Santa%20Liberata.%20Me%20gustar%C3%ADa%20agendar%20una%20visita%20informativa%20para%20conocer%20la%20promoci%C3%B3n%20con%20m%C3%A1s%20detalle.%20Gracias."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary text-center"
+              >
+                Agendar una visita informativa
+              </a>
+              <a
+                href="https://wa.me/?text=Hola%2C%20estoy%20interesado%2Fa%20en%20Residencial%20Santa%20Liberata.%20Me%20gustar%C3%ADa%20consultar%20la%20disponibilidad%20actual%20de%20las%20viviendas.%20Gracias."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary text-center"
+              >
+                Consultar disponibilidad
+              </a>
+            </div>
+          </Reveal>
+
+          <Reveal delay={160}>
+            <p className="text-[0.65rem] md:text-xs text-ink/50 leading-relaxed max-w-2xl mx-auto text-center">
+              Al contactar por WhatsApp, trataremos tus datos para atender tu solicitud de información sobre Residencial Santa Liberata, enviarte el dossier comercial, consultar disponibilidad o gestionar una visita informativa. Más información en nuestra Política de privacidad.
+            </p>
           </Reveal>
         </div>
       </section>
 
       <Footer />
-    </div>
-  );
-}
-
-function Field({ label, type, name }: { label: string; type: string; name: string }) {
-  return (
-    <div>
-      <label className="eyebrow block mb-3">{label}</label>
-      <input
-        type={type}
-        name={name}
-        className="w-full bg-transparent border-b border-input py-3 text-base text-ink-strong focus:outline-none focus:border-ink-strong transition-colors"
-      />
     </div>
   );
 }
