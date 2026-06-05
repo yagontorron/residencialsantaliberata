@@ -266,14 +266,14 @@ function Index() {
       {/* MÁS QUE UBICACIÓN — bloque destacado dentro del Capítulo II */}
       <div className="px-6 md:px-12 pb-28 md:pb-36">
         <div
-          className="max-w-[1300px] mx-auto rounded-2xl md:rounded-3xl overflow-hidden shadow-[0_30px_80px_-40px_rgba(43,31,20,0.45)]"
+          className="max-w-[1300px] mx-auto overflow-hidden shadow-[0_30px_80px_-40px_rgba(43,31,20,0.45)]"
           style={{ backgroundColor: "var(--noir)", color: "var(--ivory)" }}
         >
           <div className="px-6 sm:px-10 md:px-16 py-20 md:py-24 grid md:grid-cols-2 gap-12 md:gap-20 items-center">
             <Reveal>
               <div className="space-y-6">
-                <img src={iglesia} alt="Iglesia de Santa Liberata" className="w-full h-auto rounded-sm" />
-                <img src={plaza} alt="Proyecto de reurbanización de la Plaza Santa Liberata" className="w-full h-auto rounded-sm" />
+                <img src={iglesia} alt="Iglesia de Santa Liberata" className="w-full h-auto" />
+                <img src={plaza} alt="Proyecto de reurbanización de la Plaza Santa Liberata" className="w-full h-auto" />
               </div>
             </Reveal>
             <Reveal delay={120}>
