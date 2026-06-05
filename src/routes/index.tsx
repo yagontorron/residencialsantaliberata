@@ -221,7 +221,7 @@ function Index() {
       </section>
 
       {/* CAP II — EL LUGAR */}
-      <section id="lugar" className="py-28 md:py-40 px-6 md:px-12">
+      <section id="lugar" className="pt-28 md:pt-40 pb-12 md:pb-16 px-6 md:px-12">
         <div className="max-w-[1300px] mx-auto">
           <div className="text-center mb-20">
             <Reveal><p className="chapter-label mb-6">Capítulo II — El lugar</p></Reveal>
