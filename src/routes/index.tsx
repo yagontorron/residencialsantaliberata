@@ -339,14 +339,10 @@ function Index() {
                     </div>
                     <p className="text-sm text-ink leading-relaxed mb-8 flex-grow">{v.text}</p>
 
-                    <dl className="grid grid-cols-3 gap-4 py-5 border-y border-border mb-8">
+                    <dl className="grid grid-cols-2 gap-4 py-5 border-y border-border mb-8">
                       <div>
                         <dt className="eyebrow mb-1.5" style={{ fontSize: "0.6rem" }}>Superficie construida</dt>
                         <dd className="font-serif text-base text-ink-strong">{v.superficie}</dd>
-                      </div>
-                      <div>
-                        <dt className="eyebrow mb-1.5" style={{ fontSize: "0.6rem" }}>Dormitorios</dt>
-                        <dd className="font-serif text-base text-ink-strong">{v.dormitorios}</dd>
                       </div>
                       <div>
                         <dt className="eyebrow mb-1.5" style={{ fontSize: "0.6rem" }}>Desde</dt>
