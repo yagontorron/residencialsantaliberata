@@ -431,7 +431,7 @@ function Index() {
             {[
               { t: "Licencia concedida", s: "Completado" },
               { t: "Construcción iniciada", s: "En curso" },
-              { t: "Entrega estimada", s: "Verano 2027" },
+              { t: "Entrega estimada", s: "Septiembre 2027" },
             ].map((s, idx) => (
               <Reveal key={s.t} delay={idx * 120}>
                 <div className="text-center relative">
