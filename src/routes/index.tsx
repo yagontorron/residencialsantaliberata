@@ -119,27 +119,19 @@ function Index() {
       <Header />
 
       {/* HERO */}
-      <section className="pt-28 md:pt-40 pb-20 md:pb-28 px-6 md:px-12">
+      <section className="pt-24 md:pt-28 pb-16 md:pb-20 px-6 md:px-12">
         <div className="max-w-[1300px] mx-auto text-center flex flex-col">
-          {/* 1. Eyebrow */}
-          <Reveal>
-            <p className="eyebrow mb-10 md:mb-12">
-              Obra nueva boutique · Rúa Santa Liberata, 8 · Baiona
-            </p>
-          </Reveal>
-
-          {/* 2. Imagen principal con hairlines (mismo tratamiento, ahora arriba) */}
+          {/* Imagen principal con hairline inferior */}
           <Reveal delay={120}>
-            <div className="hairline mb-10 md:mb-14" />
             <div className="relative max-w-5xl mx-auto">
               <img
                 src={fachada}
                 alt="Fachada de Residencial Santa Liberata, ilustración a mano"
-                className="w-full h-auto"
+                className="w-full h-auto max-h-[52vh] md:max-h-[58vh] object-contain"
                 style={{ boxShadow: "0 30px 80px -40px rgba(43,31,20,0.25)" }}
               />
             </div>
-            <div className="hairline mt-10 md:mt-14 mb-12 md:mb-16" />
+            <div className="hairline mt-8 md:mt-10 mb-8 md:mb-12" />
           </Reveal>
 
           {/* 3. Título */}
