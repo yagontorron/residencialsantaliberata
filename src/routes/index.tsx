@@ -469,7 +469,7 @@ function Index() {
           </Reveal>
 
           <Reveal delay={80}>
-            <div className="grid sm:grid-cols-3 gap-4 md:gap-6 mb-12">
+            <div className="grid sm:grid-cols-2 gap-4 md:gap-6 mb-12 max-w-2xl mx-auto">
               <a
                 href="https://wa.me/34645618810?text=Hola%2C%20estoy%20interesado%2Fa%20en%20Residencial%20Santa%20Liberata.%20Me%20gustar%C3%ADa%20recibir%20el%20dossier%20comercial%20de%20la%20promoci%C3%B3n.%20Gracias."
                 target="_blank"
@@ -485,14 +485,6 @@ function Index() {
                 className="btn-primary text-center"
               >
                 Agendar una visita informativa
-              </a>
-              <a
-                href="https://wa.me/34645618810?text=Hola%2C%20estoy%20interesado%2Fa%20en%20Residencial%20Santa%20Liberata.%20Me%20gustar%C3%ADa%20consultar%20la%20disponibilidad%20actual%20de%20las%20viviendas.%20Gracias."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary text-center"
-              >
-                Consultar disponibilidad
               </a>
             </div>
           </Reveal>
