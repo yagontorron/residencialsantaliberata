@@ -177,7 +177,7 @@ function Index() {
                 ["Unidades", "4 viviendas"],
                 ["Ubicación", "Plaza Santa Liberata, Baiona"],
                 ["Proyecto", "Obra nueva boutique"],
-                ["Entrega estimada", "Verano 2027"],
+                ["Entrega estimada", "Septiembre 2027"],
               ].map(([k, v]) => (
                 <div key={k}>
                   <div className="eyebrow mb-3">{k}</div>
