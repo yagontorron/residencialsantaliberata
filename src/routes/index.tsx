@@ -463,30 +463,24 @@ function Index() {
           </div>
 
           <Reveal delay={80}>
-            <div className="grid sm:grid-cols-2 gap-5 md:gap-6 mb-12 max-w-3xl mx-auto">
+            <div className="flex flex-col sm:flex-row max-w-3xl mx-auto divide-ink/20 border-y border-ink/20 mb-12">
               <a
                 href="https://wa.me/34645618810?text=Hola%2C%20estoy%20interesado%2Fa%20en%20Residencial%20Santa%20Liberata.%20Me%20gustar%C3%ADa%20recibir%20el%20dossier%20comercial%20de%20la%20promoci%C3%B3n.%20Gracias."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative flex flex-col justify-between gap-8 p-7 md:p-8 min-h-[180px] bg-ink-strong text-ivory border border-ink-strong hover:bg-transparent hover:text-ink-strong transition-colors duration-500 overflow-hidden"
+                className="group flex-1 flex items-center justify-between gap-4 px-6 py-5 text-ink-strong hover:bg-ink-strong hover:text-ivory transition-colors duration-500"
               >
-                <span className="text-[0.65rem] tracking-[0.28em] uppercase font-light opacity-70">01 — Documentación</span>
-                <div className="flex items-end justify-between gap-4">
-                  <span className="text-xl md:text-2xl leading-tight font-light">Solicitar dossier comercial</span>
-                  <span aria-hidden className="text-2xl transition-transform duration-500 group-hover:translate-x-2">→</span>
-                </div>
+                <span className="text-[0.7rem] tracking-[0.2em] uppercase font-light">Solicitar dossier comercial</span>
+                <span className="text-xs transition-transform duration-500 group-hover:translate-x-1">→</span>
               </a>
               <a
                 href="https://wa.me/34645618810?text=Hola%2C%20estoy%20interesado%2Fa%20en%20Residencial%20Santa%20Liberata.%20Me%20gustar%C3%ADa%20agendar%20una%20visita%20informativa%20para%20conocer%20la%20promoci%C3%B3n%20con%20m%C3%A1s%20detalle.%20Gracias."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative flex flex-col justify-between gap-8 p-7 md:p-8 min-h-[180px] bg-transparent text-ink-strong border border-ink-strong hover:bg-ink-strong hover:text-ivory transition-colors duration-500 overflow-hidden"
+                className="group flex-1 flex items-center justify-between gap-4 px-6 py-5 text-ink-strong hover:bg-ink-strong hover:text-ivory transition-colors duration-500 border-t sm:border-t-0 sm:border-l border-ink/20"
               >
-                <span className="text-[0.65rem] tracking-[0.28em] uppercase font-light opacity-70">02 — Experiencia in situ</span>
-                <div className="flex items-end justify-between gap-4">
-                  <span className="text-xl md:text-2xl leading-tight font-light">Agendar visita informativa</span>
-                  <span aria-hidden className="text-2xl transition-transform duration-500 group-hover:translate-x-2">→</span>
-                </div>
+                <span className="text-[0.7rem] tracking-[0.2em] uppercase font-light">Agendar visita informativa</span>
+                <span className="text-xs transition-transform duration-500 group-hover:translate-x-1">→</span>
               </a>
             </div>
           </Reveal>
