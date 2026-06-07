@@ -143,7 +143,7 @@ function Index() {
 
           {/* 4. Subtítulo oficial */}
           <Reveal delay={220}>
-            <p className="font-serif italic text-xl md:text-2xl text-ink max-w-2xl mx-auto mb-4 font-bold">
+            <p className="font-serif italic text-xl md:text-2xl text-ink max-w-2xl mx-auto mb-4">
               Obra nueva boutique en Baiona.
             </p>
           </Reveal>
