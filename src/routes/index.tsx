@@ -143,7 +143,7 @@ function Index() {
 
           {/* 4. Subtítulo oficial */}
           <Reveal delay={220}>
-            <p className="font-serif italic text-xl md:text-2xl text-ink max-w-2xl mx-auto mb-4">
+            <p className="font-serif italic text-xl md:text-2xl text-ink max-w-2xl mx-auto mb-4 font-bold">
               Obra nueva boutique en Baiona.
             </p>
           </Reveal>
@@ -175,7 +175,7 @@ function Index() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-6 text-left max-w-5xl mx-auto">
               {[
                 ["Unidades", "4 viviendas"],
-                ["Ubicación", "Plaza Santa Liberata, Baiona"],
+                ["Ubicación", "Plaza Santa Liberata, 8, Baiona"],
                 ["Proyecto", "Obra nueva boutique"],
                 ["Entrega estimada", "Septiembre 2027"],
               ].map(([k, v]) => (
