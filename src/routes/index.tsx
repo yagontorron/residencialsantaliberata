@@ -463,27 +463,34 @@ function Index() {
           </div>
 
           <Reveal delay={80}>
-            <div className="flex flex-col sm:flex-row items-stretch justify-center divide-y sm:divide-y-0 sm:divide-x divide-ink/20 border-y border-ink/20 mb-12 max-w-3xl mx-auto">
+            <div className="grid sm:grid-cols-2 gap-5 md:gap-6 mb-12 max-w-3xl mx-auto">
               <a
                 href="https://wa.me/34645618810?text=Hola%2C%20estoy%20interesado%2Fa%20en%20Residencial%20Santa%20Liberata.%20Me%20gustar%C3%ADa%20recibir%20el%20dossier%20comercial%20de%20la%20promoci%C3%B3n.%20Gracias."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 group flex items-center justify-between gap-6 px-6 md:px-8 py-6 md:py-7 text-ink-strong hover:bg-ink-strong hover:text-ivory transition-colors duration-500"
+                className="group relative flex flex-col justify-between gap-8 p-7 md:p-8 min-h-[180px] bg-ink-strong text-ivory border border-ink-strong hover:bg-transparent hover:text-ink-strong transition-colors duration-500 overflow-hidden"
               >
-                <span className="text-[0.7rem] md:text-[0.72rem] tracking-[0.22em] uppercase font-light">Solicitar dossier comercial</span>
-                <span aria-hidden className="text-lg transition-transform duration-500 group-hover:translate-x-1">→</span>
+                <span className="text-[0.65rem] tracking-[0.28em] uppercase font-light opacity-70">01 — Documentación</span>
+                <div className="flex items-end justify-between gap-4">
+                  <span className="text-xl md:text-2xl leading-tight font-light">Solicitar dossier comercial</span>
+                  <span aria-hidden className="text-2xl transition-transform duration-500 group-hover:translate-x-2">→</span>
+                </div>
               </a>
               <a
                 href="https://wa.me/34645618810?text=Hola%2C%20estoy%20interesado%2Fa%20en%20Residencial%20Santa%20Liberata.%20Me%20gustar%C3%ADa%20agendar%20una%20visita%20informativa%20para%20conocer%20la%20promoci%C3%B3n%20con%20m%C3%A1s%20detalle.%20Gracias."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 group flex items-center justify-between gap-6 px-6 md:px-8 py-6 md:py-7 text-ink-strong hover:bg-ink-strong hover:text-ivory transition-colors duration-500"
+                className="group relative flex flex-col justify-between gap-8 p-7 md:p-8 min-h-[180px] bg-transparent text-ink-strong border border-ink-strong hover:bg-ink-strong hover:text-ivory transition-colors duration-500 overflow-hidden"
               >
-                <span className="text-[0.7rem] md:text-[0.72rem] tracking-[0.22em] uppercase font-light">Agendar visita informativa</span>
-                <span aria-hidden className="text-lg transition-transform duration-500 group-hover:translate-x-1">→</span>
+                <span className="text-[0.65rem] tracking-[0.28em] uppercase font-light opacity-70">02 — Experiencia in situ</span>
+                <div className="flex items-end justify-between gap-4">
+                  <span className="text-xl md:text-2xl leading-tight font-light">Agendar visita informativa</span>
+                  <span aria-hidden className="text-2xl transition-transform duration-500 group-hover:translate-x-2">→</span>
+                </div>
               </a>
             </div>
           </Reveal>
+
 
           <Reveal delay={160}>
             <p className="text-[0.65rem] md:text-xs text-ink/50 leading-relaxed max-w-2xl mx-auto text-center">
