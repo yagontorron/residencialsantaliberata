@@ -422,7 +422,7 @@ function Index() {
           </Reveal>
           <Reveal delay={180}>
             <p className="text-base md:text-lg text-ink leading-[1.85] font-light max-w-2xl mx-auto mb-20">
-              Residencial Santa Liberata avanza como una promoción de obra nueva con licencia concedida, construcción iniciada y entrega estimada para verano de 2027.
+              Residencial Santa Liberata avanza como una promoción de obra nueva con licencia concedida, construcción iniciada y entrega estimada para septiembre de 2027.
             </p>
           </Reveal>
 
