@@ -275,7 +275,7 @@ function Index() {
               </h2>
               <div className="hairline mb-8 w-20" style={{ background: "linear-gradient(90deg, var(--clay), transparent)" }} />
               <p className="text-base leading-[1.85] font-light opacity-85 mb-5">
-                El entorno inmediato de Santa Liberata está previsto que evolucione con un proyecto de reurbanización orientado a recuperar el espacio público, mejorar la accesibilidad y reforzar el carácter peatonal de la plaza.
+                El entorno inmediato de la promoción está previsto que evolucione con un proyecto de reurbanización orientado a recuperar el espacio público, mejorar la accesibilidad y reforzar el carácter peatonal de la plaza.
               </p>
               <p className="text-base leading-[1.85] font-light opacity-85 mb-8">
                 Una intervención que suma valor al día a día: más espacio para caminar, nuevas zonas verdes, mobiliario urbano, iluminación renovada y una plaza pensada para volver a ser lugar de encuentro.
