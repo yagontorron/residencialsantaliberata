@@ -1,4 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
@@ -10,7 +9,6 @@ import carabela from "@/assets/baiona-carabela.jpg";
 import iglesia from "@/assets/baiona-iglesia.jpg";
 import cascoantiguo from "@/assets/baiona-cascoantiguo.jpg";
 import playa from "@/assets/baiona-playa.jpg";
-import arcadas from "@/assets/baiona-arcadas.jpg";
 import plazaHotel from "@/assets/baiona-plaza-hotel.jpg";
 import cocina from "@/assets/render-cocina.jpg";
 import dormitorio from "@/assets/render-dormitorio.jpg";
@@ -21,34 +19,6 @@ import planoBajoA from "@/assets/plano-bajo-a.png";
 import planoPrimeroB from "@/assets/plano-primero-b.png";
 import planoPrimeroA from "@/assets/plano-primero-a.png";
 import iluminacionAsset from "@/assets/iluminacion-inspiracion.jpg.asset.json";
-
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Residencial Santa Liberata — Cuatro viviendas boutique en Baiona" },
-      {
-        name: "description",
-        content:
-          "Promoción boutique de cuatro viviendas de obra nueva en Plaza Santa Liberata, Baiona. Ubicación histórica, escala privada, materiales cuidados y atmósfera atlántica.",
-      },
-      { property: "og:title", content: "Residencial Santa Liberata — Cuatro viviendas boutique en Baiona" },
-      {
-        property: "og:description",
-        content:
-          "Promoción boutique de cuatro viviendas de obra nueva en Plaza Santa Liberata, Baiona.",
-      },
-      { property: "og:type", content: "website" },
-    ],
-    links: [
-      { rel: "canonical", href: "/" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap",
-      },
-    ],
-  }),
-  component: Index,
-});
 
 const viviendas = [
   {
@@ -113,7 +83,7 @@ const calidades = [
   },
 ];
 
-function Index() {
+export default function App() {
   return (
     <div id="top" className="overflow-x-hidden">
       <Header />
@@ -121,7 +91,6 @@ function Index() {
       {/* HERO */}
       <section className="pt-24 md:pt-28 pb-16 md:pb-20 px-6 md:px-12">
         <div className="max-w-[1300px] mx-auto text-center flex flex-col">
-          {/* Imagen principal con hairline inferior */}
           <Reveal delay={120}>
             <div className="relative max-w-5xl mx-auto">
               <img
@@ -134,35 +103,30 @@ function Index() {
             <div className="hairline mt-8 md:mt-10 mb-8 md:mb-12" />
           </Reveal>
 
-          {/* 3. Título */}
           <Reveal delay={160}>
             <h1 className="font-serif text-[clamp(3rem,9vw,8rem)] leading-[0.95] tracking-[-0.02em] text-ink-strong mb-6 md:mb-8">
               Residencial Santa Liberata
             </h1>
           </Reveal>
 
-          {/* 4. Subtítulo oficial */}
           <Reveal delay={220}>
             <p className="font-serif italic text-xl md:text-2xl text-ink max-w-2xl mx-auto mb-4">
               Obra nueva boutique en Baiona.
             </p>
           </Reveal>
 
-          {/* 4b. Texto secundario */}
           <Reveal delay={260}>
             <p className="text-base md:text-lg text-ink max-w-2xl mx-auto mb-4">
               Cuatro viviendas boutique en el corazón histórico de Baiona.
             </p>
           </Reveal>
 
-          {/* 5. Frase */}
           <Reveal delay={300}>
             <p className="text-sm md:text-base text-ink/80 max-w-xl mx-auto mb-10 md:mb-12">
               Para quienes valoran el lugar, la calma y el detalle.
             </p>
           </Reveal>
 
-          {/* 6. Botones */}
           <Reveal delay={380}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 md:mb-20">
               <a href="#contacto" className="btn-primary">Solicitar dossier</a>
@@ -170,7 +134,6 @@ function Index() {
             </div>
           </Reveal>
 
-          {/* 7. Datos inferiores */}
           <Reveal delay={460}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-6 text-left max-w-5xl mx-auto">
               {[
@@ -255,7 +218,7 @@ function Index() {
         </div>
       </section>
 
-      {/* MÁS QUE UBICACIÓN — bloque destacado dentro del Capítulo II */}
+      {/* MÁS QUE UBICACIÓN */}
       <div className="px-6 md:px-12 pb-28 md:pb-36">
         <div
           className="max-w-[1300px] mx-auto overflow-hidden shadow-[0_30px_80px_-40px_rgba(43,31,20,0.45)]"
@@ -359,7 +322,7 @@ function Index() {
         </div>
       </section>
 
-      {/* CAP IV — CALIDADES (memoria visual) */}
+      {/* CAP IV — CALIDADES */}
       <section id="calidades" className="py-28 md:py-40 px-6 md:px-12" style={{ backgroundColor: "var(--card)" }}>
         <div className="max-w-[1200px] mx-auto">
           <div className="text-center mb-20 md:mb-24 max-w-3xl mx-auto">
@@ -411,7 +374,7 @@ function Index() {
         </div>
       </section>
 
-      {/* CAP V — ESTADO DEL PROYECTO */}
+      {/* CAP V — ESTADO */}
       <section className="py-28 md:py-40 px-6 md:px-12">
         <div className="max-w-4xl mx-auto text-center">
           <Reveal><p className="chapter-label mb-6">Capítulo V — Estado del proyecto</p></Reveal>
@@ -484,7 +447,6 @@ function Index() {
               </a>
             </div>
           </Reveal>
-
 
           <Reveal delay={160}>
             <p className="text-[0.65rem] md:text-xs text-ink/50 leading-relaxed max-w-2xl mx-auto text-center">
