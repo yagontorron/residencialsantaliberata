@@ -3,6 +3,6 @@
   "name": "residencialstaliberata",
   "compatibility_date": "2025-09-24",
   "compatibility_flags": ["nodejs_compat"],
-  "main": ".output/server/index.mjs",
+  "main": "dist/server/server.js",
   "no_bundle": true
 }
