@@ -362,7 +362,7 @@ export default function App() {
 
           <Reveal>
             <p className="text-[0.7rem] text-ink/55 leading-relaxed mt-24 max-w-3xl mx-auto text-center italic font-light">
-              Las calidades, marcas y referencias indicadas tienen carácter orientativo. El promotor se reserva el derecho a sustituirlas por materiales de características técnicas y estéticas equivalentes, en función de la disponibilidad del mercado o de ajustes propios del proceso de ejecución de la obra.
+              Las imágenes y renders incluidos han sido elaborados con el fin de representar, de forma orientativa, la atmósfera, distribución y calidades previstas para la promoción. La vivienda finalmente ejecutada podrá presentar variaciones respecto a las representaciones mostradas, prevaleciendo siempre la memoria de calidades, los planos y la documentación contractual correspondiente.
             </p>
           </Reveal>
         </div>
