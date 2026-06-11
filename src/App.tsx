@@ -362,7 +362,7 @@ export default function App() {
 
           <Reveal>
             <p className="text-[0.7rem] text-ink/55 leading-relaxed mt-24 max-w-3xl mx-auto text-center italic font-light">
-              Las imágenes y renders incluidos han sido elaborados con el fin de representar, de forma orientativa, la atmósfera, distribución y calidades previstas para la promoción. La vivienda finalmente ejecutada podrá presentar variaciones respecto a las representaciones mostradas, prevaleciendo siempre la memoria de calidades, los planos y la documentación contractual correspondiente.
+              Las imágenes y renders incluidos representan, de forma orientativa, la atmósfera, distribución y calidades previstas para la promoción. La vivienda finalmente ejecutada podrá presentar variaciones, prevaleciendo siempre la memoria de calidades, los planos y la documentación contractual correspondiente.
             </p>
           </Reveal>
         </div>
