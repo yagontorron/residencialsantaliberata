@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://residencialsantaliberata.lovable.app/sitemap.xml
+Sitemap: https://residencialsantaliberata.com/sitemap.xml
