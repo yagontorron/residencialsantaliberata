@@ -18,7 +18,7 @@ import planoBajoB from "@/assets/plano-bajo-b.png";
 import planoBajoA from "@/assets/plano-bajo-a.png";
 import planoPrimeroB from "@/assets/plano-primero-b.png";
 import planoPrimeroA from "@/assets/plano-primero-a.png";
-import banoAsset from "@/assets/bano.jpg.asset.json";
+import bano from "@/assets/bano.jpg";
 
 const viviendas = [
   {
@@ -77,7 +77,7 @@ const calidades = [
   },
   {
     t: "Comunes y baños",
-    img: banoAsset.url,
+    img: bano,
     d: "Zonas comunes, baños y exteriores siguen la misma línea material: porcelánicos naturales, iluminación cálida y una lectura limpia del espacio.",
   },
 ];
