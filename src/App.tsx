@@ -18,7 +18,7 @@ import planoBajoB from "@/assets/plano-bajo-b.png";
 import planoBajoA from "@/assets/plano-bajo-a.png";
 import planoPrimeroB from "@/assets/plano-primero-b.png";
 import planoPrimeroA from "@/assets/plano-primero-a.png";
-import iluminacionAsset from "@/assets/iluminacion-inspiracion.jpg.asset.json";
+import banoAsset from "@/assets/bano.jpg.asset.json";
 
 const viviendas = [
   {
