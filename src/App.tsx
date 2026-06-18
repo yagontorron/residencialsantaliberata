@@ -87,6 +87,7 @@ export default function App() {
     <div id="top" className="overflow-x-hidden">
       <Header />
 
+      <main>
       {/* HERO */}
       <section className="pt-24 md:pt-28 pb-16 md:pb-20 px-6 md:px-12">
         <div className="max-w-[1300px] mx-auto text-center flex flex-col">
