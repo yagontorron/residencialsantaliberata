@@ -1,0 +1,9 @@
+# Residencial Santa Liberata
+
+> Web oficial de Residencial Santa Liberata, promoción boutique de obra nueva en Plaza Santa Liberata, Baiona (Pontevedra): cuatro viviendas junto al casco histórico.
+
+Residencial Santa Liberata es una promoción inmobiliaria de obra nueva en Baiona (Galicia, España), compuesta por cuatro viviendas de diseño contemporáneo situadas en la Plaza Santa Liberata, a pasos del casco histórico y del mar.
+
+## Pages
+
+- [Inicio](/): Presentación de la promoción, concepto, viviendas, calidades, entorno y contacto.
