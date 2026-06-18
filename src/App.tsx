@@ -450,6 +450,7 @@ export default function App() {
           </Reveal>
         </div>
       </section>
+      </main>
 
       <Footer />
     </div>
