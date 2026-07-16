@@ -134,7 +134,7 @@ export default function App() {
                 ["Unidades", "4 viviendas"],
                 ["Ubicación", "Plaza Santa Liberata, 8, Baiona"],
                 ["Proyecto", "Obra nueva boutique"],
-                ["Entrega estimada", "Noviembre 2027"],
+                ["Entrega estimada", "Diciembre 2027"],
               ].map(([k, v]) => (
                 <div key={k}>
                   <div className="eyebrow mb-3">{k}</div>
@@ -374,7 +374,7 @@ export default function App() {
           </Reveal>
           <Reveal delay={180}>
             <p className="text-base md:text-lg text-ink leading-[1.85] font-light max-w-2xl mx-auto mb-20">
-              Residencial Santa Liberata avanza como una promoción de obra nueva con licencia concedida, construcción iniciada y entrega estimada para noviembre de 2027.
+              Residencial Santa Liberata avanza como una promoción de obra nueva con licencia concedida, construcción iniciada y entrega estimada para diciembre de 2027.
             </p>
           </Reveal>
 
@@ -383,7 +383,7 @@ export default function App() {
             {[
               { t: "Licencia concedida", s: "Completado" },
               { t: "Construcción iniciada", s: "En curso" },
-              { t: "Entrega estimada", s: "Noviembre 2027" },
+              { t: "Entrega estimada", s: "Diciembre 2027" },
             ].map((s, idx) => (
               <Reveal key={s.t} delay={idx * 120}>
                 <div className="text-center relative">
