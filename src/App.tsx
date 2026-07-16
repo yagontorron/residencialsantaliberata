@@ -27,7 +27,6 @@ const viviendas = [
     dormitorios: 3,
     superficie: "175,65 m²",
     precio: "590.000 €",
-    estado: "disponible",
     plano: planoBajoA,
     text: "Tres dormitorios y dos baños con jardín privado. Distribución pensada para conectar interior y exterior. Aerotermia con suelo radiante, trastero y posibilidad de espacio polivalente en semisótano.",
   },
@@ -37,7 +36,6 @@ const viviendas = [
     dormitorios: 3,
     superficie: "243,57 m²",
     precio: "725.000 €",
-    estado: "reservada",
     plano: planoBajoB,
     text: "Tres dormitorios y dos baños con jardín privado y espacio polivalente en semisótano. Versátil, con aerotermia mediante suelo radiante y trastero incluido.",
   },
@@ -47,7 +45,6 @@ const viviendas = [
     dormitorios: 3,
     superficie: "131,32 m²",
     precio: "525.000 €",
-    estado: "disponible",
     plano: planoPrimeroA,
     text: "Tres dormitorios y dos baños en primera planta con vistas a Plaza Santa Liberata. Luminosa y equilibrada, con aerotermia mediante suelo radiante, trastero y posibilidad de espacio polivalente en bajocubierta.",
   },
@@ -57,7 +54,6 @@ const viviendas = [
     dormitorios: 3,
     superficie: "133,91 m²",
     precio: "535.000 €",
-    estado: "disponible",
     plano: planoPrimeroB,
     text: "Tres dormitorios y dos baños en primera planta con vistas a Plaza Santa Liberata. Distribución cómoda y funcional, con aerotermia mediante suelo radiante, trastero y posibilidad de espacio polivalente en bajocubierta.",
   },
@@ -274,29 +270,13 @@ export default function App() {
             </Reveal>
           </div>
 
-          <div className="text-center mb-10 md:mb-12">
-            <p className="text-sm md:text-base text-ink/70 font-light">
-              3 de 4 viviendas disponibles
-            </p>
-          </div>
-
           <div className="grid md:grid-cols-2 gap-6 md:gap-10">
             {viviendas.map((v, idx) => (
               <Reveal key={v.nombre} delay={idx * 80}>
                 <article
-                  className="group relative h-full flex flex-col transition-all duration-500"
+                  className="group h-full flex flex-col transition-all duration-500"
                   style={{ backgroundColor: "var(--card)", border: "1px solid var(--border)" }}
                 >
-                  {v.estado === "disponible" ? (
-                    <span className="absolute top-4 right-4 md:top-6 md:right-6 z-10 px-3 py-1.5 text-[0.65rem] tracking-[0.18em] uppercase font-medium bg-sage text-ivory">
-                      Disponible
-                    </span>
-                  ) : (
-                    <span className="absolute top-4 right-4 md:top-6 md:right-6 z-10 px-3 py-1.5 text-[0.65rem] tracking-[0.18em] uppercase font-medium bg-sand text-ink-strong">
-                      Reservada
-                    </span>
-                  )}
-
                   <div
                     className="p-6 md:p-8 flex items-center justify-center"
                     style={{ backgroundColor: "var(--stone-warm)" }}
@@ -304,7 +284,7 @@ export default function App() {
                     <img
                       src={v.plano}
                       alt={`Plano de la vivienda ${v.nombre}`}
-                      className={`w-full h-auto max-h-[420px] object-contain transition-opacity duration-500 ${v.estado === "reservada" ? "opacity-70" : ""}`}
+                      className="w-full h-auto max-h-[420px] object-contain"
                       loading="lazy"
                     />
                   </div>
@@ -327,9 +307,7 @@ export default function App() {
                       </div>
                     </dl>
 
-                    {v.estado !== "reservada" && (
-                      <a href="#contacto" className="btn-ghost w-full">Solicitar información</a>
-                    )}
+                    <a href="#contacto" className="btn-ghost w-full">Solicitar información</a>
                   </div>
                 </article>
               </Reveal>
