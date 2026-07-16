@@ -2,7 +2,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
 import { PlaceCarousel } from "@/components/PlaceCarousel";
-import fachada from "@/assets/fachada.png";
+import fachada from "@/assets/fachada-hero.webp.asset.json";
 import aerea from "@/assets/baiona-aerea.jpg";
 import castelo from "@/assets/baiona-castelo.jpg";
 import carabela from "@/assets/baiona-carabela.jpg";
