@@ -116,14 +116,8 @@ export default function App() {
           </Reveal>
 
           <Reveal delay={260}>
-            <p className="text-base md:text-lg text-ink max-w-2xl mx-auto mb-4">
+            <p className="text-base md:text-lg text-ink max-w-2xl mx-auto mb-10 md:mb-12">
               Cuatro viviendas boutique en el corazón histórico de Baiona.
-            </p>
-          </Reveal>
-
-          <Reveal delay={300}>
-            <p className="text-sm md:text-base text-ink/80 max-w-xl mx-auto mb-10 md:mb-12">
-              Para quienes valoran el lugar, la calma y el detalle.
             </p>
           </Reveal>
 
