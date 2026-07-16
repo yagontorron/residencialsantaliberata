@@ -110,7 +110,7 @@ export default function App() {
           </Reveal>
 
           <Reveal delay={260}>
-            <p className="text-base md:text-lg text-ink max-w-2xl mx-auto mb-4">
+            <p className="font-serif italic text-xl md:text-2xl text-ink max-w-2xl mx-auto mb-4">
               Cuatro viviendas de obra nueva en el corazón histórico de Baiona.
             </p>
           </Reveal>
