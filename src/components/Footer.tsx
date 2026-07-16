@@ -9,7 +9,7 @@ export function Footer() {
               Obra nueva boutique en Baiona.
             </p>
             <p className="text-xs opacity-60 leading-relaxed max-w-xs">
-              Plaza Santa Liberata, Baiona.
+              Plaza Santa Liberata, 8, Baiona.
             </p>
           </div>
           <div>
