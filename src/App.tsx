@@ -94,7 +94,7 @@ export default function App() {
           <Reveal delay={120}>
             <div className="relative max-w-5xl mx-auto">
               <img
-                src={fachada}
+                src={fachada.url}
                 alt="Fachada de Residencial Santa Liberata, ilustración a mano"
                 className="w-full h-auto max-h-[52vh] md:max-h-[58vh] object-contain"
                 style={{ boxShadow: "0 30px 80px -40px rgba(43,31,20,0.25)" }}
