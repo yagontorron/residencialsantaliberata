@@ -111,7 +111,7 @@ export default function App() {
 
           <Reveal delay={220}>
             <p className="font-serif italic text-xl md:text-2xl text-ink max-w-2xl mx-auto mb-4">
-              Obra nueva boutique en Baiona.
+              Obra nueva en Baiona.
             </p>
           </Reveal>
 
@@ -121,11 +121,6 @@ export default function App() {
             </p>
           </Reveal>
 
-          <Reveal delay={300}>
-            <p className="text-sm md:text-base text-ink/80 max-w-xl mx-auto mb-10 md:mb-12">
-              Para quienes valoran el lugar, la calma y el detalle.
-            </p>
-          </Reveal>
 
           <Reveal delay={380}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 md:mb-20">
