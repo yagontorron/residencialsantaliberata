@@ -3,22 +3,22 @@ import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
 import { PlaceCarousel } from "@/components/PlaceCarousel";
 import fachada from "@/assets/fachada-hero.webp";
-import aerea from "@/assets/baiona-aerea.jpg";
-import castelo from "@/assets/baiona-castelo.jpg";
-import carabela from "@/assets/baiona-carabela.jpg";
-import iglesia from "@/assets/baiona-iglesia.jpg";
-import cascoantiguo from "@/assets/baiona-cascoantiguo.jpg";
-import playa from "@/assets/baiona-playa.jpg";
-import plazaHotel from "@/assets/baiona-plaza-hotel.jpg";
-import cocina from "@/assets/render-cocina.jpg";
-import dormitorio from "@/assets/render-dormitorio.jpg";
-import salon from "@/assets/render-salon.jpg";
-import plaza from "@/assets/plaza-proyecto.png";
-import planoBajoB from "@/assets/plano-bajo-b.png";
-import planoBajoA from "@/assets/plano-bajo-a.png";
-import planoPrimeroB from "@/assets/plano-primero-b.png";
-import planoPrimeroA from "@/assets/plano-primero-a.png";
-import bano from "@/assets/bano.jpg";
+import aerea from "@/assets/baiona-aerea.webp";
+import castelo from "@/assets/baiona-castelo.webp";
+import carabela from "@/assets/baiona-carabela.webp";
+import iglesia from "@/assets/baiona-iglesia.webp";
+import cascoantiguo from "@/assets/baiona-cascoantiguo.webp";
+import playa from "@/assets/baiona-playa.webp";
+import plazaHotel from "@/assets/baiona-plaza-hotel.webp";
+import cocina from "@/assets/render-cocina.webp";
+import dormitorio from "@/assets/render-dormitorio.webp";
+import salon from "@/assets/render-salon.webp";
+import plaza from "@/assets/plaza-proyecto.webp";
+import planoBajoB from "@/assets/plano-bajo-b.webp";
+import planoBajoA from "@/assets/plano-bajo-a.webp";
+import planoPrimeroB from "@/assets/plano-primero-b.webp";
+import planoPrimeroA from "@/assets/plano-primero-a.webp";
+import bano from "@/assets/bano.webp";
 
 const viviendas = [
   {
