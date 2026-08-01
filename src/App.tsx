@@ -2,7 +2,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
 import { PlaceCarousel } from "@/components/PlaceCarousel";
-import fachada from "@/assets/fachada-hero.webp";
+const fachada = "/hero-fachada.webp";
 import aerea from "@/assets/baiona-aerea.webp";
 import castelo from "@/assets/baiona-castelo.webp";
 import carabela from "@/assets/baiona-carabela.webp";
@@ -96,6 +96,10 @@ export default function App() {
               <img
                 src={fachada}
                 alt="Fachada de Residencial Santa Liberata, ilustración a mano"
+                width={1600}
+                height={800}
+                fetchPriority="high"
+                decoding="async"
                 className="w-full h-auto max-h-[52vh] md:max-h-[58vh] object-contain"
                 style={{ boxShadow: "0 30px 80px -40px rgba(43,31,20,0.25)" }}
               />
