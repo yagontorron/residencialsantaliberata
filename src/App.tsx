@@ -195,7 +195,7 @@ export default function App() {
 
           <Reveal>
             <figure className="mb-6">
-              <img src={aerea} alt="Vista aérea de Baiona" className="w-full h-[60vh] md:h-[80vh] object-cover" />
+              <img src={aerea} alt="Vista aérea de Baiona" loading="lazy" decoding="async" width={768} height={890} className="w-full h-[60vh] md:h-[80vh] object-cover" />
               <figcaption className="eyebrow mt-4">Baiona · Vista aérea</figcaption>
             </figure>
           </Reveal>
@@ -225,8 +225,8 @@ export default function App() {
           <div className="px-6 sm:px-10 md:px-16 py-20 md:py-24 grid md:grid-cols-2 gap-12 md:gap-20 items-center">
             <Reveal>
               <div className="space-y-6">
-                <img src={iglesia} alt="Iglesia de Santa Liberata" className="w-full h-auto" />
-                <img src={plaza} alt="Proyecto de reurbanización de la Plaza Santa Liberata" className="w-full h-auto" />
+                <img src={iglesia} alt="Iglesia de Santa Liberata" loading="lazy" decoding="async" width={1024} height={765} className="w-full h-auto" />
+                <img src={plaza} alt="Proyecto de reurbanización de la Plaza Santa Liberata" loading="lazy" decoding="async" width={793} height={449} className="w-full h-auto" />
               </div>
             </Reveal>
             <Reveal delay={120}>
@@ -348,7 +348,7 @@ export default function App() {
               <Reveal key={c.t} delay={(idx % 2) * 100}>
                 <figure>
                   <div className="relative mb-8">
-                    <img src={c.img} alt={c.t} className="w-full aspect-[4/3] object-cover" />
+                    <img src={c.img} alt={c.t} loading="lazy" decoding="async" className="w-full aspect-[4/3] object-cover" />
                   </div>
                   <figcaption>
                     <h3 className="font-serif text-2xl md:text-3xl text-ink-strong mb-4">{c.t}</h3>
