@@ -2,23 +2,23 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
 import { PlaceCarousel } from "@/components/PlaceCarousel";
-import fachada from "@/assets/fachada-hero.webp";
-import aerea from "@/assets/baiona-aerea.jpg";
-import castelo from "@/assets/baiona-castelo.jpg";
-import carabela from "@/assets/baiona-carabela.jpg";
-import iglesia from "@/assets/baiona-iglesia.jpg";
-import cascoantiguo from "@/assets/baiona-cascoantiguo.jpg";
-import playa from "@/assets/baiona-playa.jpg";
-import plazaHotel from "@/assets/baiona-plaza-hotel.jpg";
-import cocina from "@/assets/render-cocina.jpg";
-import dormitorio from "@/assets/render-dormitorio.jpg";
-import salon from "@/assets/render-salon.jpg";
-import plaza from "@/assets/plaza-proyecto.png";
-import planoBajoB from "@/assets/plano-bajo-b.png";
-import planoBajoA from "@/assets/plano-bajo-a.png";
-import planoPrimeroB from "@/assets/plano-primero-b.png";
-import planoPrimeroA from "@/assets/plano-primero-a.png";
-import bano from "@/assets/bano.jpg";
+const fachada = "/hero-fachada.webp";
+import aerea from "@/assets/baiona-aerea.webp";
+import castelo from "@/assets/baiona-castelo.webp";
+import carabela from "@/assets/baiona-carabela.webp";
+import iglesia from "@/assets/baiona-iglesia.webp";
+import cascoantiguo from "@/assets/baiona-cascoantiguo.webp";
+import playa from "@/assets/baiona-playa.webp";
+import plazaHotel from "@/assets/baiona-plaza-hotel.webp";
+import cocina from "@/assets/render-cocina.webp";
+import dormitorio from "@/assets/render-dormitorio.webp";
+import salon from "@/assets/render-salon.webp";
+import plaza from "@/assets/plaza-proyecto.webp";
+import planoBajoB from "@/assets/plano-bajo-b.webp";
+import planoBajoA from "@/assets/plano-bajo-a.webp";
+import planoPrimeroB from "@/assets/plano-primero-b.webp";
+import planoPrimeroA from "@/assets/plano-primero-a.webp";
+import bano from "@/assets/bano.webp";
 
 const viviendas = [
   {
@@ -96,6 +96,10 @@ export default function App() {
               <img
                 src={fachada}
                 alt="Fachada de Residencial Santa Liberata, ilustración a mano"
+                width={1600}
+                height={800}
+                fetchPriority="high"
+                decoding="async"
                 className="w-full h-auto max-h-[52vh] md:max-h-[58vh] object-contain"
                 style={{ boxShadow: "0 30px 80px -40px rgba(43,31,20,0.25)" }}
               />
@@ -191,7 +195,7 @@ export default function App() {
 
           <Reveal>
             <figure className="mb-6">
-              <img src={aerea} alt="Vista aérea de Baiona" className="w-full h-[60vh] md:h-[80vh] object-cover" />
+              <img src={aerea} alt="Vista aérea de Baiona" loading="lazy" decoding="async" width={768} height={890} className="w-full h-[60vh] md:h-[80vh] object-cover" />
               <figcaption className="eyebrow mt-4">Baiona · Vista aérea</figcaption>
             </figure>
           </Reveal>
@@ -221,8 +225,8 @@ export default function App() {
           <div className="px-6 sm:px-10 md:px-16 py-20 md:py-24 grid md:grid-cols-2 gap-12 md:gap-20 items-center">
             <Reveal>
               <div className="space-y-6">
-                <img src={iglesia} alt="Iglesia de Santa Liberata" className="w-full h-auto" />
-                <img src={plaza} alt="Proyecto de reurbanización de la Plaza Santa Liberata" className="w-full h-auto" />
+                <img src={iglesia} alt="Iglesia de Santa Liberata" loading="lazy" decoding="async" width={1024} height={765} className="w-full h-auto" />
+                <img src={plaza} alt="Proyecto de reurbanización de la Plaza Santa Liberata" loading="lazy" decoding="async" width={793} height={449} className="w-full h-auto" />
               </div>
             </Reveal>
             <Reveal delay={120}>
@@ -344,7 +348,7 @@ export default function App() {
               <Reveal key={c.t} delay={(idx % 2) * 100}>
                 <figure>
                   <div className="relative mb-8">
-                    <img src={c.img} alt={c.t} className="w-full aspect-[4/3] object-cover" />
+                    <img src={c.img} alt={c.t} loading="lazy" decoding="async" className="w-full aspect-[4/3] object-cover" />
                   </div>
                   <figcaption>
                     <h3 className="font-serif text-2xl md:text-3xl text-ink-strong mb-4">{c.t}</h3>
