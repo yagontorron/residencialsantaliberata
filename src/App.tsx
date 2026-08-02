@@ -92,7 +92,7 @@ export default function App() {
       <section className="pt-24 md:pt-28 pb-16 md:pb-20 px-6 md:px-12">
         <div className="max-w-[1300px] mx-auto text-center flex flex-col">
           <Reveal delay={120}>
-            <div className="relative max-w-5xl mx-auto">
+            <div className="relative max-w-5xl mx-auto w-fit" style={{ boxShadow: "0 30px 80px -40px rgba(43,31,20,0.25)" }}>
               <img
                 src={fachada}
                 alt="Fachada de Residencial Santa Liberata, ilustración a mano"
@@ -100,8 +100,7 @@ export default function App() {
                 height={800}
                 fetchPriority="high"
                 decoding="async"
-                className="w-full h-auto max-h-[52vh] md:max-h-[58vh] object-contain"
-                style={{ boxShadow: "0 30px 80px -40px rgba(43,31,20,0.25)" }}
+                className="w-auto h-auto max-w-full max-h-[52vh] md:max-h-[58vh] object-contain"
               />
             </div>
             <div className="hairline mt-8 md:mt-10 mb-8 md:mb-12" />
