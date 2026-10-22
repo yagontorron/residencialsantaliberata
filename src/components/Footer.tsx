@@ -6,7 +6,7 @@ export function Footer() {
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-20">
         <div className="grid md:grid-cols-3 gap-12 mb-16">
           <div>
-            <div className="inline-flex w-fit mb-6 px-6 py-5" style={{ backgroundColor: "var(--ivory)" }}>
+            <div className="inline-flex w-fit mb-6 px-5 py-4" style={{ backgroundColor: "var(--logo-paper)" }}>
               <img
                 src={logo}
                 alt="Residencial Santa Liberata"
@@ -14,7 +14,7 @@ export function Footer() {
                 height={426}
                 loading="lazy"
                 decoding="async"
-                className="h-20 md:h-24 w-auto"
+                className="h-24 md:h-28 w-auto"
               />
             </div>
             <p className="text-sm opacity-80 leading-relaxed max-w-xs mb-2">
