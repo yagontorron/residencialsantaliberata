@@ -1,4 +1,4 @@
-import logo from "@/assets/logo-isotipo.webp";
+import logo from "@/assets/logo-isotipo-negro.png";
 
 export function Footer() {
   return (
