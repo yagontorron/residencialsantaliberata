@@ -6,22 +6,27 @@ export function Footer() {
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-20">
         <div className="grid md:grid-cols-3 gap-12 mb-16">
           <div className="order-last md:order-none">
-            <img
-              src={logo}
-              alt="Residencial Santa Liberata"
-              width={640}
-              height={426}
-              loading="lazy"
-              decoding="async"
-              className="block h-24 md:h-28 w-auto mb-7"
-            />
-            <div className="font-serif text-2xl tracking-[0.15em] uppercase mb-3">Residencial Santa Liberata</div>
-            <p className="text-sm opacity-80 leading-relaxed max-w-xs mb-2">
-              Obra nueva boutique en Baiona.
-            </p>
-            <p className="text-xs opacity-60 leading-relaxed max-w-xs">
-              Plaza Santa Liberata, 8, Baiona.
-            </p>
+            <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-8 mb-7">
+              <img
+                src={logo}
+                alt="Residencial Santa Liberata"
+                width={640}
+                height={426}
+                loading="lazy"
+                decoding="async"
+                className="block h-24 md:h-28 w-auto shrink-0"
+              />
+              <div>
+                <div className="font-serif text-2xl tracking-[0.15em] uppercase mb-3">Residencial Santa Liberata</div>
+                <p className="text-sm opacity-80 leading-relaxed max-w-xs mb-2">
+                  Obra nueva boutique en Baiona.
+                </p>
+                <p className="text-xs opacity-60 leading-relaxed max-w-xs">
+                  Plaza Santa Liberata, 8, Baiona.
+                </p>
+              </div>
+            </div>
+
           </div>
           <div>
             <div className="text-[0.7rem] tracking-[0.28em] uppercase opacity-60 mb-5">Navegación</div>
