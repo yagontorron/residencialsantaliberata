@@ -4,9 +4,9 @@ export function Footer() {
   return (
     <footer style={{ backgroundColor: "var(--noir)", color: "var(--ivory)" }}>
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-20">
-        <div className="grid md:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)_minmax(0,1fr)] gap-12 mb-16">
+        <div className="grid md:grid-cols-3 lg:grid-cols-[minmax(0,2.6fr)_minmax(0,1fr)_minmax(0,1fr)] gap-12 mb-16">
           <div className="order-last md:order-none min-w-0">
-            <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-8 mb-7">
+            <div className="flex flex-col lg:flex-row lg:items-center gap-6 mb-7">
               <img
                 src={logo}
                 alt="Residencial Santa Liberata"
@@ -14,7 +14,7 @@ export function Footer() {
                 height={426}
                 loading="lazy"
                 decoding="async"
-                className="block h-28 w-auto shrink-0 self-start md:self-center"
+                className="block h-24 xl:h-28 w-auto shrink-0 self-start lg:self-center"
               />
               <div>
                 <div className="font-serif text-2xl tracking-[0.15em] uppercase mb-3">Residencial Santa Liberata</div>
