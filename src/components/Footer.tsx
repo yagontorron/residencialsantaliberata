@@ -6,15 +6,15 @@ export function Footer() {
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-20">
         <div className="grid md:grid-cols-3 gap-12 mb-16">
           <div>
-            <div className="inline-block w-fit mb-7 p-2 md:p-3 border" style={{ borderColor: "rgba(244,239,234,0.16)" }}>
+            <div className="inline-block w-fit mb-7 border" style={{ borderColor: "rgba(244,239,234,0.18)" }}>
               <img
                 src={logo}
-                alt="Residencial Santa Liberata"
-                width={640}
-                height={426}
+                alt="Fachada de Residencial Santa Liberata"
+                width={409}
+                height={147}
                 loading="lazy"
                 decoding="async"
-                className="block h-24 md:h-28 w-auto"
+                className="block h-16 md:h-20 w-auto"
               />
             </div>
             <div className="font-serif text-2xl tracking-[0.15em] uppercase mb-3">Residencial Santa Liberata</div>
