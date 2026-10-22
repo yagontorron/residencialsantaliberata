@@ -6,17 +6,15 @@ export function Footer() {
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-20">
         <div className="grid md:grid-cols-3 gap-12 mb-16">
           <div>
-            <div className="inline-block w-fit mb-7 border" style={{ borderColor: "rgba(244,239,234,0.18)" }}>
-              <img
-                src={logo}
-                alt="Fachada de Residencial Santa Liberata"
-                width={409}
-                height={147}
-                loading="lazy"
-                decoding="async"
-                className="block h-16 md:h-20 w-auto"
-              />
-            </div>
+            <img
+              src={logo}
+              alt="Fachada de Residencial Santa Liberata"
+              width={1558}
+              height={469}
+              loading="lazy"
+              decoding="async"
+              className="block h-16 md:h-20 w-auto mb-7"
+            />
             <div className="font-serif text-2xl tracking-[0.15em] uppercase mb-3">Residencial Santa Liberata</div>
             <p className="text-sm opacity-80 leading-relaxed max-w-xs mb-2">
               Obra nueva boutique en Baiona.
