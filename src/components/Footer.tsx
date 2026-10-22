@@ -5,7 +5,7 @@ export function Footer() {
     <footer style={{ backgroundColor: "var(--noir)", color: "var(--ivory)" }}>
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-20">
         <div className="grid md:grid-cols-3 gap-12 mb-16">
-          <div>
+          <div className="order-last md:order-none">
             <img
               src={logo}
               alt="Fachada de Residencial Santa Liberata"
