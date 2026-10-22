@@ -7,7 +7,6 @@ import aerea from "@/assets/baiona-aerea.webp";
 import castelo from "@/assets/baiona-castelo.webp";
 import carabela from "@/assets/baiona-carabela.webp";
 import iglesia from "@/assets/baiona-iglesia.webp";
-import cascoantiguo from "@/assets/baiona-cascoantiguo.webp";
 import playa from "@/assets/baiona-playa.webp";
 import plazaHotel from "@/assets/baiona-plaza-hotel.webp";
 import cocina from "@/assets/render-cocina.webp";
@@ -203,7 +202,6 @@ export default function App() {
             <div className="mt-12">
               <PlaceCarousel
                 items={[
-                  { src: cascoantiguo, cap: "Casco histórico" },
                   { src: castelo, cap: "Castillo de Monterreal" },
                   { src: carabela, cap: "Carabela Pinta" },
                   { src: playa, cap: "Mar y playas" },
