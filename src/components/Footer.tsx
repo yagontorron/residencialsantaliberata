@@ -4,24 +4,29 @@ export function Footer() {
   return (
     <footer style={{ backgroundColor: "var(--noir)", color: "var(--ivory)" }}>
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-20">
-        <div className="grid md:grid-cols-3 gap-12 mb-16">
-          <div className="order-last md:order-none">
-            <img
-              src={logo}
-              alt="Residencial Santa Liberata"
-              width={640}
-              height={426}
-              loading="lazy"
-              decoding="async"
-              className="block h-24 md:h-28 w-auto mb-7"
-            />
-            <div className="font-serif text-2xl tracking-[0.15em] uppercase mb-3">Residencial Santa Liberata</div>
-            <p className="text-sm opacity-80 leading-relaxed max-w-xs mb-2">
-              Obra nueva boutique en Baiona.
-            </p>
-            <p className="text-xs opacity-60 leading-relaxed max-w-xs">
-              Plaza Santa Liberata, 8, Baiona.
-            </p>
+        <div className="grid md:grid-cols-3 lg:grid-cols-[minmax(0,2.6fr)_minmax(0,1fr)_minmax(0,1fr)] gap-12 mb-16">
+          <div className="order-last md:order-none min-w-0">
+            <div className="flex flex-col lg:flex-row lg:items-center gap-6 mb-7">
+              <img
+                src={logo}
+                alt="Residencial Santa Liberata"
+                width={640}
+                height={426}
+                loading="lazy"
+                decoding="async"
+                className="block h-24 xl:h-28 w-auto shrink-0 self-start lg:self-center"
+              />
+              <div>
+                <div className="font-serif text-2xl tracking-[0.15em] uppercase mb-3">Residencial Santa Liberata</div>
+                <p className="text-sm opacity-80 leading-relaxed max-w-xs mb-2">
+                  Obra nueva boutique en Baiona.
+                </p>
+                <p className="text-xs opacity-60 leading-relaxed max-w-xs">
+                  Plaza Santa Liberata, 8, Baiona.
+                </p>
+              </div>
+            </div>
+
           </div>
           <div>
             <div className="text-[0.7rem] tracking-[0.28em] uppercase opacity-60 mb-5">Navegación</div>
