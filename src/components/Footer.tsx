@@ -1,4 +1,4 @@
-import logo from "@/assets/logo-isotipo-negro.webp";
+import logo from "@/assets/logo.webp";
 
 export function Footer() {
   return (
@@ -8,12 +8,12 @@ export function Footer() {
           <div className="order-last md:order-none">
             <img
               src={logo}
-              alt="Fachada de Residencial Santa Liberata"
-              width={1558}
-              height={469}
+              alt="Residencial Santa Liberata"
+              width={640}
+              height={426}
               loading="lazy"
               decoding="async"
-              className="block h-16 md:h-20 w-auto mb-7"
+              className="block h-24 md:h-28 w-auto mb-7"
             />
             <div className="font-serif text-2xl tracking-[0.15em] uppercase mb-3">Residencial Santa Liberata</div>
             <p className="text-sm opacity-80 leading-relaxed max-w-xs mb-2">
