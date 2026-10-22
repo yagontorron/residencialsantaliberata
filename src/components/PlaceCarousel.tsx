@@ -16,11 +16,11 @@ export function PlaceCarousel({ items }: { items: Item[] }) {
   return (
     <div className="relative">
       <div className="overflow-hidden" ref={emblaRef}>
-        <div className="flex gap-8 md:gap-10">
+        <div className="flex">
           {items.map((i) => (
             <figure
               key={i.cap}
-              className="shrink-0 basis-[80%] sm:basis-[55%] md:basis-[38%] lg:basis-[30%]"
+              className="shrink-0 basis-[80%] sm:basis-[55%] md:basis-[38%] lg:basis-[30%] pr-8 md:pr-10"
             >
               <div className="relative overflow-hidden">
                 <img
