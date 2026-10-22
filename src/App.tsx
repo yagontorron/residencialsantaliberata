@@ -2,7 +2,6 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
 import { PlaceCarousel } from "@/components/PlaceCarousel";
-import { EnvironmentCarousel } from "@/components/EnvironmentCarousel";
 const fachada = "/hero-fachada.webp";
 import aerea from "@/assets/baiona-aerea.webp";
 import castelo from "@/assets/baiona-castelo.webp";
@@ -222,10 +221,10 @@ export default function App() {
         >
           <div className="px-6 sm:px-10 md:px-16 py-20 md:py-24 grid md:grid-cols-2 gap-12 md:gap-20 items-center">
             <Reveal>
-              <EnvironmentCarousel images={[
-                { src: iglesia, alt: "Iglesia de Santa Liberata", width: 1024, height: 765 },
-                { src: plaza, alt: "Proyecto de reurbanización de la Plaza Santa Liberata", width: 793, height: 449 },
-              ]} />
+              <div className="space-y-6">
+                <img src={iglesia} alt="Iglesia de Santa Liberata" loading="lazy" decoding="async" width={1024} height={765} className="w-full h-auto" />
+                <img src={plaza} alt="Proyecto de reurbanización de la Plaza Santa Liberata" loading="lazy" decoding="async" width={793} height={449} className="w-full h-auto" />
+              </div>
             </Reveal>
             <Reveal delay={120}>
               <p className="chapter-label mb-5" style={{ color: "var(--clay)" }}>Entorno en evolución</p>
