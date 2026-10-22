@@ -1,10 +1,22 @@
+import logo from "@/assets/logo.webp";
+
 export function Footer() {
   return (
     <footer style={{ backgroundColor: "var(--noir)", color: "var(--ivory)" }}>
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-20">
         <div className="grid md:grid-cols-3 gap-12 mb-16">
           <div>
-            <div className="font-serif text-2xl tracking-[0.15em] uppercase mb-3">Residencial Santa Liberata</div>
+            <div className="inline-flex w-fit mb-6 px-5 py-4" style={{ backgroundColor: "var(--logo-paper)" }}>
+              <img
+                src={logo}
+                alt="Residencial Santa Liberata"
+                width={640}
+                height={426}
+                loading="lazy"
+                decoding="async"
+                className="h-24 md:h-28 w-auto"
+              />
+            </div>
             <p className="text-sm opacity-80 leading-relaxed max-w-xs mb-2">
               Obra nueva boutique en Baiona.
             </p>
